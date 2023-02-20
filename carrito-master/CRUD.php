@@ -115,11 +115,11 @@ elseif(isset($_POST['delete'])){ //Se produce un error por lo cual mostramos que
 
 
         //ACTUALIZAMOS EL PRODUCTO EN LA BASE DE DATOS
-        $updatequery = "UPDATE mis_productos SET name = '$nombre', description='$descripcion' , price= '$precio' , modified= '$fecha_actual' WHERE id='$id'";
-        $result1 = mysqli_query($db , $updatequery) or die(mysqli_error($db));
+        $deletequery = "DELETE from mis_productos WHERE id='$id'";
+        $result1 = mysqli_query($db , $deletequery) or die(mysqli_error($db));
 
         if (mysqli_affected_rows($db) > 0) {
-            echo "<script>alert('Producto Actualizado Correctamente.');
+            echo "<script>alert('Producto Eliminado');
             window.location.href='index.php';</script>";
         }
         else {
@@ -131,5 +131,5 @@ else
 {
     echo "<script>alert('Ha ocurrido un error, inténtalo otra vez');</script>";
     //redirect to the home page
-    header("Location:AgregarProducto.php");
+    header("Location:index.php");
 }

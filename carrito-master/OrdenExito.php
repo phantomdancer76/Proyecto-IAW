@@ -19,6 +19,9 @@ if (!isset($_REQUEST['id'])) {
       color: #34a853;
       font-size: 18px;
     }
+    body{
+        background-image: url("../images/mamadisimo.jpg");
+    }
   </style>
 </head>
 </head>

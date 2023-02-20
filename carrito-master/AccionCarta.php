@@ -1,7 +1,7 @@
 <?php
       //start session
       session_start();
-	  include "../olvidopass-master/user.php";
+	  include "../olvidopass-master/userAccount.php";
       include "../olvidopass-master/dbConfig.php";
       $email = $_SESSION['email'];
       $selectquery = "SELECT * FROM users WHERE email = '$email';";
@@ -55,9 +55,9 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
     }elseif($_REQUEST['action'] == 'removeCartItem' && !empty($_REQUEST['id'])){
         $deleteItem = $cart->remove($_REQUEST['id']);
         header("Location: VerCarta.php");
-    }elseif($_REQUEST['action'] == 'placeOrder' && $cart->total_items() > 0 && !empty($_SESSION['sessCustomerID'])){
+    }elseif($_REQUEST['action'] == 'placeOrder' && $cart->total_items() > 0 && !empty($_SESSION['id'])){
         // insert order details into database
-        $insertOrder = $db->query("INSERT INTO orden (customer_id, total_price, created, modified) VALUES ('".$row['id']."', '".$cart->total()."', '".date("Y-m-d H:i:s")."', '".date("Y-m-d H:i:s")."')");
+        $insertOrder = $db->query("INSERT INTO orden (customer_id, total_price, created, modified) VALUES ('".$_SESSION['id']."', '".$cart->total()."', '".date("Y-m-d H:i:s")."', '".date("Y-m-d H:i:s")."')");
         
         if($insertOrder){
             $orderID = $db->insert_id;

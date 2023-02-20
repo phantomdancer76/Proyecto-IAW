@@ -21,6 +21,9 @@ include 'Configuracion.php';
             display: block;
             font-size: 22px;
         }
+        body{
+        background-image: url("../images/mamadisimo.jpg");
+    }
     </style>
 </head>
 </head>
@@ -35,13 +38,13 @@ include 'Configuracion.php';
                     <li role="presentation"><a href="VerCarta.php">Carrito de Compras</a></li>
                     <li role="presentation"><a href="Pagos.php">Pagar</a></li>
                     <li role="presentation"><a href="AgregarProducto.php">Nuevo Producto</a></li>
-                    <li role="presentation" class="active"><a href="ModificarProducto.php">Modificar Producto</a></li>
-                    <li role="presentation"><a href="EliminarProducto.php">Eliminar Producto</a></li>
+                    <li role="presentation"><a href="ModificarProducto.php">Modificar Producto</a></li>
+                    <li role="presentation" class="active"><a href="EliminarProducto.php">Eliminar Producto</a></li>
                 </ul>
             </div>
 
             <div class="panel-body">
-                <h1>Tienda de Productos - MODIFICAR</h1>
+                <h1>Tienda de Productos - ELIMINAR</h1>
                 </br>
                     <?php
                         //start session
@@ -75,8 +78,20 @@ include 'Configuracion.php';
 
                 <!--<a href="VerCarta.php" class="cart-link" title="Ver Carta"><i class="glyphicon glyphicon-shopping-cart"></i></a>-->
                 <div id="products" class="row list-group">
-                    <form method="POST" action="CRUD.php">
-                <button type="submit" class="btn btn-info" name="delete">Eliminar Producto</button>
+                <form method="POST" action="CRUD.php">
+				<div class="form-group">
+					<label for="username">Nombre Producto</label>
+					<input type="text" name="nombre" placeholder="Nombre del Producto" readonly value= "<?php echo $nombre; ?>" class="form-control" required>
+				</div>
+				<div class="form-group">
+					<label>Descripción</label>
+					<input type="text" name="descripcion" placeholder="Descripción del Producto" readonly value= "<?php echo $descripcion; ?>"class="form-control" required>
+				</div>
+				<div class="form-group">
+					<label>Precio</label>
+					<input type="text" name="precio" placeholder="Precio del Producto" readonly value= "<?php echo $precio; ?>"class="form-control" required>
+				</div>
+                <button type="submit" class="btn btn-danger" name="delete">Eliminar Producto</button>
  			</form>
                 </div>
             </div>

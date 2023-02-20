@@ -21,6 +21,9 @@ include 'Configuracion.php';
             display: block;
             font-size: 22px;
         }
+        body{
+        background-image: url("../images/mamadisimo.jpg");
+    }
     </style>
 </head>
 </head>
@@ -35,8 +38,8 @@ include 'Configuracion.php';
                     <li role="presentation"><a href="VerCarta.php">Carrito de Compras</a></li>
                     <li role="presentation"><a href="Pagos.php">Pagar</a></li>
                     <li role="presentation"><a href="AgregarProducto.php">Nuevo Producto</a></li>
-                    <li role="presentation" class="active"><a href="ModificarProducto.php">Modificar Producto</a></li>
-                    <li role="presentation"><a href="EliminarProducto.php">Eliminar Producto</a></li>
+                    <li role="presentation" ><a href="ModificarProducto.php">Modificar Producto</a></li>
+                    <li role="presentation" class="active"><a href="EliminarProducto.php">Eliminar Producto</a></li>
                 </ul>
             </div>
 
@@ -73,7 +76,7 @@ include 'Configuracion.php';
                                     <td>".$row["price"]."</td>
                                     <td>&nbsp;</td>
                                     <td>
-                                        <a href='ModificarUnProducto.php?id=". $row["id"]."' class='btn btn-warning' onclick=\"return confirm('¿Deseas eliminar este producto?');\"><i class='glyphicon glyphicon-pencil'></i></a>
+                                        <a href='EliminarUnProducto.php?id=". $row["id"]."' class='btn btn-danger' onclick=\"return confirm('¿Deseas eliminar este producto?');\"><i class='glyphicon glyphicon-trash'></i></a>
                                     </td>
                                 </tr>
                                 ";
@@ -85,7 +88,7 @@ include 'Configuracion.php';
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td><a href="index.php" class="btn btn-warning"><i class="glyphicon glyphicon-menu-left"></i> Volver a la tienda</a></td>
+                            <td><a href="index.php" class="btn btn-danger"><i class="glyphicon glyphicon-menu-left"></i> Volver a la tienda</a></td>
                             <td colspan="2"></td>
                         </tr>
                     </tfoot>
