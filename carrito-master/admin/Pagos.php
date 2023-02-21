@@ -50,6 +50,9 @@ $custRow = $query->fetch_assoc();
         .orderBtn {
             float: right;
         }
+        body{
+        background-image: url("../images/mamadisimo.jpg");
+    }
     </style>
 </head>
 
@@ -74,7 +77,7 @@ $custRow = $query->fetch_assoc();
                     <thead>
                         <tr>
                             <th>Producto</th>
-                            <th>Pricio</th>
+                            <th>Precio</th>
                             <th>Cantidad</th>
                             <th>Sub total</th>
                         </tr>
@@ -88,9 +91,9 @@ $custRow = $query->fetch_assoc();
                         ?>
                                 <tr>
                                     <td><?php echo $item["name"]; ?></td>
-                                    <td><?php echo '$' . $item["price"] . ' COP'; ?></td>
+                                    <td><?php echo '€' . $item["price"] . ' EUR'; ?></td>
                                     <td><?php echo $item["qty"]; ?></td>
-                                    <td><?php echo '$' . $item["subtotal"] . ' COP'; ?></td>
+                                    <td><?php echo '€' . $item["subtotal"] . ' EUR'; ?></td>
                                 </tr>
                             <?php }
                         } else { ?>
@@ -104,7 +107,7 @@ $custRow = $query->fetch_assoc();
                         <tr>
                             <td colspan="3"></td>
                             <?php if ($cart->total_items() > 0) { ?>
-                                <td class="text-center"><strong>Total <?php echo '$' . $cart->total() . ' COP'; ?></strong></td>
+                                <td class="text-center"><strong>Total <?php echo '€' . $cart->total() . ' EUR'; ?></strong></td>
                             <?php } ?>
                         </tr>
                     </tfoot>
@@ -118,11 +121,11 @@ $custRow = $query->fetch_assoc();
                 </div>
                 <div class="footBtn">
                     <a href="index.php" class="btn btn-warning"><i class="glyphicon glyphicon-menu-left"></i> Continue Comprando</a>
-                    <a href="AccionCarta.php?action=placeOrder" class="btn btn-success orderBtn">Realizar pedido <i class="glyphicon glyphicon-menu-right"></i></a>
+                    <a href="./AccionCarta.php?action=placeOrder" class="btn btn-success orderBtn">Realizar pedido <i class="glyphicon glyphicon-menu-right"></i></a>
                 </div>
             </div>
         </div>
-        <!--Panek cierra-->
+        <!--Panel cierra-->
     </div>
 </body>
 

@@ -37,9 +37,6 @@ include 'Configuracion.php';
                     <li role="presentation" class="active"><a href="index.php">Inicio</a></li>
                     <li role="presentation"><a href="VerCarta.php">Carrito de Compras</a></li>
                     <li role="presentation"><a href="Pagos.php">Pagar</a></li>
-                    <li role="presentation"><a href="AgregarProducto.php">Nuevo Producto</a></li>
-                    <li role="presentation"><a href="ModificarProducto.php">Modificar Producto</a></li>
-                    <li role="presentation"><a href="EliminarProducto.php">Eliminar Producto</a></li>
                 </ul>
             </div>
 

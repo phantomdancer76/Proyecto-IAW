@@ -21,6 +21,9 @@ include 'Configuracion.php';
             display: block;
             font-size: 22px;
         }
+        body{
+        background-image: url("../images/mamadisimo.jpg");
+    }
     </style>
 </head>
 </head>

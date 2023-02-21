@@ -20,6 +20,9 @@ $cart = new Cart;
         input[type="number"] {
             width: 20%;
         }
+        body{
+        background-image: url("../images/mamadisimo.jpg");
+    }
     </style>
     <script>
         function updateCartItem(obj, id) {

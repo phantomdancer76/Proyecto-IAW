@@ -19,6 +19,7 @@
       session_start();
 			include "./olvidopass-master/user.php";
       include "./olvidopass-master/dbConfig.php";
+      $redirect = '';
       $email = $_SESSION['email'];
       $selectquery = "SELECT * FROM users WHERE email = '$email';";
       $result = mysqli_query($mysqli, $selectquery) or die(mysqli_error($mysqli));
@@ -90,7 +91,12 @@
                     <ul class="rd-navbar-nav">
                       <li class="active"><a href="index.html"><span>Inicio</span></a></li>
                       <li><a href="about-coach.html"><span>Entrenadores</span></a></li>
-                      <li><a href="./carrito-master/index.php"><span>Tienda Online</span></a></li>
+                      <li><a href="<?php if ($_SESSION['role'] === 'admin'){
+                        $redirect = "./carrito-master/admin/index.php";
+                      } else {
+                        $redirect = "./carrito-master/index.php";
+                      }
+                      echo $redirect?>"><span>Tienda Online</span></a></li>
                       <li><a href="contacts.html"><span>Información de usuario</span></a></li>
                       <li><a href="olvidopass-master/userDashboard.php"><?php echo $_SESSION['email']?></a></li>
                       <li><a href="./olvidopass-master/userAccount.php?logoutSubmit=1" class="logout">Logout</a></li>
