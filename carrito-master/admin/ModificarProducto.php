@@ -41,6 +41,7 @@ include 'Configuracion.php';
                     <li role="presentation" class="active"><a href="ModificarProducto.php">Modificar Producto</a></li>
                     <li role="presentation"><a href="EliminarProducto.php">Eliminar Producto</a></li>
                     <li role="presentation"><a href="historialCompras.php">Historial de Compras</a></li>
+                    <li role="presentation"><a href="../../index2.php">Volver a la página principal</a></li>
 
                 </ul>
             </div>

@@ -65,7 +65,7 @@ include 'Configuracion.php';
                                                 <p class="lead"><?php echo '€' . $row["price"] . 'EUR'; ?></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <a class="btn btn-success" href="AccionCarta.php?action=addToCart&id=<?php echo $row["id"]; ?>">Enviar al Carrito</a>
+                                                <a class="btn btn-success"  href="AccionCarta.php?action=addToCart&id=<?php echo $row["id"]; ?>"><i class="glyphicon glyphicon-shopping-cart" ></i> Enviar al Carrito</a>
                                             </div>
                                         </div>
                                     </div>

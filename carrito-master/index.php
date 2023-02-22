@@ -38,6 +38,7 @@ include 'Configuracion.php';
                     <li role="presentation"><a href="VerCarta.php">Carrito de Compras</a></li>
                     <li role="presentation"><a href="Pagos.php">Pagar</a></li>
                     <li role="presentation"><a href="historialCompras.php">Historial de Compras</a></li>
+                    <li role="presentation"><a href="../index2.php">Volver a la página principal</a></li>
                 </ul>
             </div>
 
@@ -61,7 +62,7 @@ include 'Configuracion.php';
                                                 <p class="lead"><?php echo '€' . $row["price"] . 'EUR'; ?></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <a class="btn btn-success" href="AccionCarta.php?action=addToCart&id=<?php echo $row["id"]; ?>">Enviar al Carrito</a>
+                                            <a class="btn btn-success"  href="AccionCarta.php?action=addToCart&id=<?php echo $row["id"]; ?>"><i class="glyphicon glyphicon-shopping-cart" ></i> Enviar al Carrito</a>
                                             </div>
                                         </div>
                                     </div>
