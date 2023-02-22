@@ -51,9 +51,6 @@ $cart = new Cart;
                     <li role="presentation"><a href="index.php">Inicio</a></li>
                     <li role="presentation" class="active"><a href="VerCarta.php">Carrito de Compras</a></li>
                     <li role="presentation"><a href="Pagos.php">Pagar</a></li>
-                    <li role="presentation"><a href="AgregarProducto.php">Nuevo Producto</a></li>
-                    <li role="presentation"><a href="ModificarProducto.php">Modificar Producto</a></li>
-                    <li role="presentation"><a href="EliminarProducto.php">Eliminar Producto</a></li>
                 </ul>
             </div>
 
@@ -80,9 +77,9 @@ $cart = new Cart;
                         ?>
                                 <tr>
                                     <td><?php echo $item["name"]; ?></td>
-                                    <td><?php echo '$' . $item["price"] . ' COP'; ?></td>
+                                    <td><?php echo '€' . $item["price"] . ' EUR'; ?></td>
                                     <td><input type="number" class="form-control text-center" value="<?php echo $item["qty"]; ?>" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')"></td>
-                                    <td><?php echo '$' . $item["subtotal"] . ' COP'; ?></td>
+                                    <td><?php echo '€' . $item["subtotal"] . ' EUR'; ?></td>
                                     <td>
                                         <a href="AccionCarta.php?action=removeCartItem&id=<?php echo $item["rowid"]; ?>" class="btn btn-danger" onclick="return confirm('Confirma eliminar?')"><i class="glyphicon glyphicon-trash"></i></a>
                                     </td>
@@ -100,7 +97,7 @@ $cart = new Cart;
                             <td><a href="index.php" class="btn btn-warning"><i class="glyphicon glyphicon-menu-left"></i> Volver a la tienda</a></td>
                             <td colspan="2"></td>
                             <?php if ($cart->total_items() > 0) { ?>
-                                <td class="text-center"><strong>Total <?php echo '$' . $cart->total() . ' COP'; ?></strong></td>
+                                <td class="text-center"><strong>Total <?php echo '€' . $cart->total() . ' EUR'; ?></strong></td>
                                 <td><a href="Pagos.php" class="btn btn-success btn-block">Pagos <i class="glyphicon glyphicon-menu-right"></i></a></td>
                             <?php } ?>
                         </tr>
