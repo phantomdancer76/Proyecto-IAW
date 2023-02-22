@@ -46,7 +46,7 @@ include 'Configuracion.php';
             font-size: 22px;
         }
         body{
-        background-image: url("../images/mamadisimo.jpg");
+            background-image: url("../images/pesa.jpg");
     }
     </style>
 </head>
@@ -63,7 +63,6 @@ include 'Configuracion.php';
                     <li role="presentation"><a href="Pagos.php">Pagar</a></li>
                     <li role="presentation" class="active"><a href="historialCompras.php">Historial de Compras</a></li>
                     <li role="presentation"><a href="../index2.php">Volver a la página principal</a></li>
-
                 </ul>
             </div>
 
@@ -101,7 +100,7 @@ include 'Configuracion.php';
                                     <td>".$row["created"]."</td>
                                     <td>&nbsp;</td>
                                     <td>
-                                        <a href='ModificarUnProducto.php?id=". $row["id"]."' class='btn btn-info' onclick=\"return confirm('¿Deseas Ver el pedido?');\"><i class='glyphicon glyphicon-plus'></i></a>
+                                        <a href='VerUnaOrden.php?id=". $row["id"]."' class='btn btn-info'><i class='glyphicon glyphicon-plus'></i></a>
                                     </td>
                                 </tr>
                                 ";

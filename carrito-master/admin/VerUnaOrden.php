@@ -1,5 +1,7 @@
 <?php
 include 'Configuracion.php';
+session_start();
+$idpasada=$_REQUEST['id'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -22,7 +24,7 @@ include 'Configuracion.php';
             font-size: 22px;
         }
         body{
-        background-image: url("../../images/mamadisimo.jpg");
+        background-image: url("../../images/pesa.jpg");
     }
     </style>
 </head>
@@ -46,7 +48,7 @@ include 'Configuracion.php';
             </div>
 
             <div class="panel-body">
-                <h1>Tienda de Productos - Historial de compras</h1>
+                <h1>Tienda de Productos - Artículos de la orden número <?php echo $idpasada;?></h1>
                 </br>
                 <table class="table">
                     <thead>
@@ -59,7 +61,6 @@ include 'Configuracion.php';
                     </thead>
                     <?php
                         //start session
-                        session_start();
                         //Incluimos el fichero de configuración para poder conectarnos con la BBDD.
                         include 'Configuracion.php';
                         if(!empty($_REQUEST['id'])){

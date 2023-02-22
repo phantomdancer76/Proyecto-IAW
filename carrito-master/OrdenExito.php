@@ -20,7 +20,7 @@ if (!isset($_REQUEST['id'])) {
       font-size: 18px;
     }
     body{
-        background-image: url("../images/mamadisimo.jpg");
+        background-image: url("../images/pesa.jpg");
     }
   </style>
 </head>

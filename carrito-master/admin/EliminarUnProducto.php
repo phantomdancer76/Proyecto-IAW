@@ -22,7 +22,7 @@ include 'Configuracion.php';
             font-size: 22px;
         }
         body{
-            background-image: url("../../images/mamadisimo.jpg");
+            background-image: url("../../images/pesa.jpg");
     }
     </style>
 </head>

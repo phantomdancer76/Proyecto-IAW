@@ -21,7 +21,7 @@ $cart = new Cart;
             width: 20%;
         }
         body{
-        background-image: url("../images/mamadisimo.jpg");
+        background-image: url("../images/pesa.jpg");
     }
     </style>
     <script>
