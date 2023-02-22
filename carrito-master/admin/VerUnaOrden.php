@@ -48,17 +48,24 @@ include 'Configuracion.php';
             <div class="panel-body">
                 <h1>Tienda de Productos - Historial de compras</h1>
                 </br>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
                     <?php
                         //start session
                         session_start();
                         //Incluimos el fichero de configuración para poder conectarnos con la BBDD.
                         include 'Configuracion.php';
                         if(!empty($_REQUEST['id'])){
+                            $idpasada=$_REQUEST['id'];
 
-                            $id = $_REQUEST['id'];
-                            $_SESSION["id"]=$id;
-
-                            $selectquery = "SELECT mis_productos.name AS 'nombre', mis_productos.description AS 'descripcion', orden_articulos.quantity AS quantity FROM orden_articulos JOIN orden ON orden_articulos.order_id = orden.id JOIN mis_productos ON mis_productos.id = orden_articulos.product_id WHERE orden_articulos.order_id=$id;";
+                            $selectquery = "SELECT mis_productos.name AS 'nombre', mis_productos.description AS 'descripcion', orden_articulos.quantity AS quantity FROM orden_articulos JOIN orden ON orden_articulos.order_id = orden.id JOIN mis_productos ON mis_productos.id = orden_articulos.product_id WHERE orden_articulos.order_id=$idpasada;";
                             $result = mysqli_query($db , $selectquery) or die(mysqli_error($db));
 
                             if (mysqli_num_rows($result) > 0) {
@@ -76,7 +83,7 @@ include 'Configuracion.php';
                                 }
                         }
                     ?>
-
+                </table>
                 <!--<a href="VerCarta.php" class="cart-link" title="Ver Carta"><i class="glyphicon glyphicon-shopping-cart"></i></a>-->
                 <a href="historialCompras.php" class="btn btn-info"><i class="glyphicon glyphicon-menu-left"></i> Volver</a>
  			</form>

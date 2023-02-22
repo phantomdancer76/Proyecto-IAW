@@ -51,7 +51,7 @@ $custRow = $query->fetch_assoc();
             float: right;
         }
         body{
-        background-image: url("../images/mamadisimo.jpg");
+            background-image: url("../../images/mamadisimo.jpg");
     }
     </style>
 </head>

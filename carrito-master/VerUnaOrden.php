@@ -5,7 +5,7 @@ include 'Configuracion.php';
 <html lang="es">
 
 <head>
-    <title>Modificar Productos</title>
+    <title>Ver artículos de la carta</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -22,7 +22,7 @@ include 'Configuracion.php';
             font-size: 22px;
         }
         body{
-            background-image: url("../../images/mamadisimo.jpg");
+        background-image: url("../images/mamadisimo.jpg");
     }
     </style>
 </head>
@@ -39,61 +39,53 @@ include 'Configuracion.php';
                     <li role="presentation"><a href="Pagos.php">Pagar</a></li>
                     <li role="presentation"><a href="AgregarProducto.php">Nuevo Producto</a></li>
                     <li role="presentation"><a href="ModificarProducto.php">Modificar Producto</a></li>
-                    <li role="presentation" class="active"><a href="EliminarProducto.php">Eliminar Producto</a></li>
-                    <li role="presentation"><a href="historialCompras.php">Historial de Compras</a></li>
+                    <li role="presentation"><a href="EliminarProducto.php">Eliminar Producto</a></li>
+                    <li role="presentation" class="active"><a href="historialCompras.php">Historial de Compras</a></li>
                     <li role="presentation"><a href="../../index2.php">Volver a la página principal</a></li>
                 </ul>
             </div>
 
             <div class="panel-body">
-                <h1>Tienda de Productos - ELIMINAR</h1>
+                <h1>Tienda de Productos - Historial de compras</h1>
                 </br>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
                     <?php
                         //start session
                         session_start();
                         //Incluimos el fichero de configuración para poder conectarnos con la BBDD.
                         include 'Configuracion.php';
                         if(!empty($_REQUEST['id'])){
+                            $idpasada=$_REQUEST['id'];
 
-                            $id = $_REQUEST['id'];
-                            $_SESSION["id"]=$id;
-
-                            $selectquery = "SELECT id, name, description, price FROM mis_productos WHERE id=$id;";
+                            $selectquery = "SELECT mis_productos.name AS 'nombre', mis_productos.description AS 'descripcion', orden_articulos.quantity AS quantity FROM orden_articulos JOIN orden ON orden_articulos.order_id = orden.id JOIN mis_productos ON mis_productos.id = orden_articulos.product_id WHERE orden_articulos.order_id=$idpasada;";
                             $result = mysqli_query($db , $selectquery) or die(mysqli_error($db));
 
-                            //Si es mayor que cero el número de filas obtenidas
                             if (mysqli_num_rows($result) > 0) {
-                            //Recorremos cada una de las filas de la tabla para obtener todos los productos.
-                                while($row = mysqli_fetch_assoc($result)) {
-                                    $nombre= $row["name"];
-                                    $descripcion = $row["description"];
-                                    $precio = $row["price"];
-                                    $fecha_actual = date("Y-m-d h:i:s");
+                                //Recorremos cada una de las filas de la tabla para obtener todos los productos.
+                                    while($row = mysqli_fetch_assoc($result)) {
+                                        echo "
+                                        <tr>
+                                            <td>".$row["nombre"]."</td>
+                                            <td>".$row["descripcion"]."</td>
+                                            <td>".$row["quantity"]."</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        ";
+                                    }
                                 }
-                            }
-                        }
-                        else
-                        {
-                            echo "<script>alert('0 Producto Seleccionado');</script>";
                         }
                     ?>
-
+                </table>
                 <!--<a href="VerCarta.php" class="cart-link" title="Ver Carta"><i class="glyphicon glyphicon-shopping-cart"></i></a>-->
-                <div id="products" class="row list-group">
-                <form method="POST" action="CRUD.php">
-				<div class="form-group">
-					<label for="username">Nombre Producto</label>
-					<input type="text" name="nombre" placeholder="Nombre del Producto" readonly value= "<?php echo $nombre; ?>" class="form-control" required>
-				</div>
-				<div class="form-group">
-					<label>Descripción</label>
-					<input type="text" name="descripcion" placeholder="Descripción del Producto" readonly value= "<?php echo $descripcion; ?>"class="form-control" required>
-				</div>
-				<div class="form-group">
-					<label>Precio</label>
-					<input type="text" name="precio" placeholder="Precio del Producto" readonly value= "<?php echo $precio; ?>"class="form-control" required>
-				</div>
-                <button type="submit" class="btn btn-danger" name="delete">Eliminar Producto</button>
+                <a href="historialCompras.php" class="btn btn-info"><i class="glyphicon glyphicon-menu-left"></i> Volver</a>
  			</form>
                 </div>
             </div>
