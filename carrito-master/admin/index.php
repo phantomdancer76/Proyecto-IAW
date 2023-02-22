@@ -40,6 +40,7 @@ include 'Configuracion.php';
                     <li role="presentation"><a href="AgregarProducto.php">Nuevo Producto</a></li>
                     <li role="presentation"><a href="ModificarProducto.php">Modificar Producto</a></li>
                     <li role="presentation"><a href="EliminarProducto.php">Eliminar Producto</a></li>
+                    <li role="presentation"><a href="historialCompras.php">Historial de Compras</a></li>
                 </ul>
             </div>
 

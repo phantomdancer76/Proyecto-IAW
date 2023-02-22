@@ -27,6 +27,7 @@
       if (mysqli_num_rows($result) > 0) {
         //Recorremos cada una de las filas de la tabla para obtener todos los productos.
             while($row = mysqli_fetch_assoc($result)) {
+                $_SESSION['email']=$row['email'];
                 $_SESSION['id']=$row['id'];
                 $_SESSION['first_name']=$row['first_name'];
                 $_SESSION['last_name']=$row['last_name'];
