@@ -103,7 +103,7 @@ include 'Configuracion.php';
                                     <td>".$row["created"]."</td>
                                     <td>&nbsp;</td>
                                     <td>
-                                        <a href='ModificarUnProducto.php?id=". $row["id"]."' class='btn btn-info' onclick=\"return confirm('¿Deseas Ver el pedido?');\"><i class='glyphicon glyphicon-plus'></i></a>
+                                        <a href='VerUnaOrden.php?id=". $row["id"]."' class='btn btn-info'><i class='glyphicon glyphicon-plus'></i></a>
                                     </td>
                                 </tr>
                                 ";
