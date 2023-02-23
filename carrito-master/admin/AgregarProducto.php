@@ -50,7 +50,7 @@ include 'Configuracion.php';
                 </br>
                 <!--<a href="VerCarta.php" class="cart-link" title="Ver Carta"><i class="glyphicon glyphicon-shopping-cart"></i></a>-->
                 <div id="products" class="row list-group">
-                    <form method="POST" action="CRUD.php">
+                    <form method="POST" action="CRUD.php" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="username">Nombre Producto</label>
 					<input type="text" name="nombre" placeholder="Nombre del Producto" value= "<?php if(isset($_POST['register'])) { echo $_POST['nombre']; } ?>" class="form-control" required>

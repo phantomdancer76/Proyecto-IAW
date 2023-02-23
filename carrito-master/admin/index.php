@@ -21,9 +21,15 @@ include 'Configuracion.php';
             display: block;
             font-size: 22px;
         }
-        body{
+
+        body {
             background-image: url("../../images/pesa.jpg");
-    }
+        }
+
+        li {
+            list-style-type: none;
+            display: block;
+        }
     </style>
 </head>
 </head>
@@ -50,22 +56,44 @@ include 'Configuracion.php';
                 <a href="VerCarta.php" class="cart-link" title="Ver Carta"><i class="glyphicon glyphicon-shopping-cart"></i></a>
                 <div id="products" class="row list-group">
                     <?php
+                    if (!empty($_REQUEST["nume"])) {
+                        $_REQUEST["nume"] = $_REQUEST["nume"];
+                    } else {
+                        $_REQUEST["nume"] = '1';
+                    }
+                    if ($_REQUEST["nume"] == "") {
+                        $_REQUEST["nume"] = "1";
+                    }
+                    $articulos = mysqli_query($db, "SELECT * FROM mis_productos  ;");
+                    $num_registros = @mysqli_num_rows($articulos);
+                    $registros = '2';
+                    $pagina = $_REQUEST["nume"];
+                    if (is_numeric($pagina))
+                        $inicio = (($pagina - 1) * $registros);
+                    else
+                        $inicio = 0;
+                    $busqueda = mysqli_query($db, "SELECT * FROM mis_productos LIMIT $inicio,$registros;");
+                    $paginas = ceil($num_registros / $registros);
+
+                    ?>
+                    <?php
                     //get rows query
                     $query = $db->query("SELECT * FROM mis_productos ORDER BY id DESC LIMIT 10");
-                    if ($query->num_rows > 0) {
-                        while ($row = $query->fetch_assoc()) {
+                    if ($num_registros > 0) {
+                        while ($resultados = mysqli_fetch_assoc($busqueda)) {
                     ?>
+
                             <div class="item col-lg-4">
                                 <div class="thumbnail">
                                     <div class="caption">
-                                        <h4 class="list-group-item-heading"><?php echo $row["name"]; ?></h4>
-                                        <p class="list-group-item-text"><?php echo $row["description"]; ?></p>
+                                        <h4 class="list-group-item-heading"><?php echo $resultados["name"]; ?></h4>
+                                        <p class="list-group-item-text"><?php echo $resultados["description"]; ?></p>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <p class="lead"><?php echo '€' . $row["price"] . 'EUR'; ?></p>
+                                                <p class="lead"><?php echo '€' . $resultados["price"] . 'EUR'; ?></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <a class="btn btn-success"  href="AccionCarta.php?action=addToCart&id=<?php echo $row["id"]; ?>"><i class="glyphicon glyphicon-shopping-cart" ></i> Enviar al Carrito</a>
+                                                <a class="btn btn-success" href="AccionCarta.php?action=addToCart&id=<?php echo $resultados["id"]; ?>"><i class="glyphicon glyphicon-shopping-cart"></i> Enviar al Carrito</a>
                                             </div>
                                         </div>
                                     </div>
@@ -75,6 +103,31 @@ include 'Configuracion.php';
                     } else { ?>
                         <p>Producto(s) no existe.....</p>
                     <?php } ?>
+                        <?php
+                        if ($_REQUEST["nume"] == "1") {
+                            $_REQUEST["nume"] == "0";
+                            echo  "";
+                        } else {
+                            if ($pagina > 1)
+                                $ant = $_REQUEST["nume"] - 1;
+                            echo "<a class='btn btn-info' aria-label='Previous' href='index.php?nume=1'><span aria-hidden='true'>&laquo;</span><span class='sr-only'>Previous</span></a>";
+                            echo "<li class='page-item '><a class='btn btn-info' href='index.php?nume=" . ($pagina - 1) . "' >" . $ant . "</a></li>";
+                        }
+                        echo "<li class='active'><a class='btn btn-success' >" . $_REQUEST["nume"] . "</a></li>";
+                        $sigui = $_REQUEST["nume"] + 1;
+                        $ultima = $num_registros / $registros;
+                        if ($ultima == $_REQUEST["nume"] + 1) {
+                            $ultima == "";
+                        }
+                        if ($pagina < $paginas && $paginas > 1)
+                            echo "<li class='page-item'><a class='btn btn-info' href='index.php?nume=" . ($pagina + 1) . "'>" . $sigui . "</a></li>";
+                        if ($pagina < $paginas && $paginas > 1)
+                            echo "
+            <li class='page-item'><a class='btn btn-info' aria-label='Next' href='index.php?nume=" . ceil($ultima) . "'><span aria-hidden='true'>&raquo;</span><span class='sr-only'>Next</span></a>
+            </li>";
+                        ?>
+                        
+                    </div>
                 </div>
             </div>
         </div>
