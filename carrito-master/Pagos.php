@@ -122,6 +122,17 @@ $custRow = $query->fetch_assoc();
                 <div class="footBtn">
                     <a href="index.php" class="btn btn-warning"><i class="glyphicon glyphicon-menu-left"></i> Continue Comprando</a>
                     <a href="./AccionCarta.php?action=placeOrder" class="btn btn-success orderBtn">Realizar pedido <i class="glyphicon glyphicon-menu-right"></i></a>
+                    <a href="javascript:;" id="btnImprimir" class="btn btn-danger hidden-print">Imprimir pedido</a>
+                    <script>
+        $('#btnImprimir').on('click',function(){
+
+            window.print();
+
+            return false;
+
+        })
+                        
+    </script>
                 </div>
             </div>
         </div>
