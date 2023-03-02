@@ -81,17 +81,17 @@
                 <!-- RD Navbar Top Panel Toggle-->
                 <button class="rd-navbar-top-panel-toggle" data-rd-navbar-toggle=".rd-navbar, .rd-navbar-top-panel"><span></span></button>
                 <!--Navbar Brand-->
-                <div class="rd-navbar-brand"><a href="index.html"><img width='173' height='30' src='images/logo.png' alt=''/></a></div>
+                <div class="rd-navbar-brand"><a href="index2.php"><img width='173' height='30' src='images/logo.png' alt=''/></a></div>
               </div>
               <div class="rd-navbar-menu-wrap">
                 <div class="rd-navbar-nav-wrap">
                   <div class="rd-navbar-mobile-scroll">
                     <!--Navbar Brand Mobile-->
-                    <div class="rd-navbar-mobile-brand"><a href="index.html"><img width='173' height='30' src='images/logo.png' alt=''/></a></div>
+                    <div class="rd-navbar-mobile-brand"><a href="index2.php"><img width='173' height='30' src='images/logo.png' alt=''/></a></div>
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
                       <li class="active"><a href="index2.php"><span>Inicio</span></a></li>
-                      <li><a href="about-coach.html"><span>Entrenadores</span></a></li>
+                      <li><a href="about-coach.php"><span>Entrenadores</span></a></li>
                       <li><a href="<?php if ($_SESSION['role'] === 'admin'){
                         $redirect = "./carrito-master/admin/index.php";
                       } else {
@@ -117,14 +117,14 @@
                   <div class="container">
                     <div class="row justify-content-xl-center">
                       <div class="col-xl-12">
-                        <div class="text-extra-big font-weight-bold font-italic text-uppercase" data-caption-animate="fadeInUp" data-caption-delay="300">No Pain No Gain</div>
+                        <div class="text-extra-big font-weight-bold font-italic text-uppercase" data-caption-animate="fadeInUp" data-caption-delay="300">Sin sufrimiento no hay ganancia</div>
                       </div>
                       <div class="col-xl-8 offset-top-10">
                         <h5 class="hidden d-sm-block text-light" data-caption-animate="fadeInUp" data-caption-delay="500">
-                          Having a perfect body requires a lot of training. Nice-looking body and
-                          powerful organism are interconnected – and we can help you with both.
+                          Tener un cuerpo perfecto requiere de mucho entrenamiento. Un cuerpo que se ve bien
+                          y un organismo fuerte están interconectados, y nosotros te podemos ayudar con eso.
                         </h5>
-                        <div class="offset-top-20 offset-sm-top-50"><a class="btn btn-danger btn-anis-effect" href="#" data-waypoint-to="#welcome" data-caption-animate="fadeInUp" data-caption-delay="800"><span class="btn-text">get started</span></a></div>
+                        <div class="offset-top-20 offset-sm-top-50"><a class="btn btn-danger btn-anis-effect" href="olvidopass-master/index.php" data-waypoint-to="#welcome" data-caption-animate="fadeInUp" data-caption-delay="800"><span class="btn-text">Inscríbete Ahora</span></a></div>
                       </div>
                     </div>
                   </div>
@@ -137,27 +137,30 @@
                   <div class="container">
                     <div class="row justify-content-xl-center">
                       <div class="col-xl-12">
-                        <div class="text-extra-big font-weight-bold font-italic text-uppercase" data-caption-animate="fadeInUp" data-caption-delay="300">never give up</div>
+                        <div class="text-extra-big font-weight-bold font-italic text-uppercase" data-caption-animate="fadeInUp" data-caption-delay="300">Nunca te rindas</div>
                       </div>
                       <div class="col-xl-8 offset-top-10">
-                        <h5 class="hidden d-sm-block text-light" data-caption-animate="fadeInUp" data-caption-delay="500">Every bodybuilder requires a lot of dedication and effort to shape his/her body into something to be proud of. We can give you everything you need for it.</h5>
-                        <div class="offset-top-20 offset-sm-top-50"><a class="btn btn-danger btn-anis-effect" href="#" data-waypoint-to="#welcome" data-caption-animate="fadeInUp" data-caption-delay="800"><span class="btn-text">get started</span></a></div>
+                        <h5 class="hidden d-sm-block text-light" data-caption-animate="fadeInUp" data-caption-delay="500">Toda persona que construye su cuerpo requiere de muchísima dedicación y esfuerzo para darle forma a su cuerpo para que se ajuste a algo de lo que estar orgulloso. Te podemos dar todo lo necesario para que consigas tu objetivo
+                        </h5>
+                        <div class="offset-top-20 offset-sm-top-50"><a class="btn btn-danger btn-anis-effect" href="olvidopass-master/index.php" data-waypoint-to="#welcome" data-caption-animate="fadeInUp" data-caption-delay="800"><span class="btn-text">Inscríbete Ahora</span></a></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide" data-slide-bg="images/tercera_barra.jpg" data-preview-bg="images/tercera_barra.jpg">              <div class="swiper-caption swiper-parallax" data-speed="0.5" data-fade="true">
+            <div class="swiper-slide" data-slide-bg="images/tercera_barra.jpg" data-preview-bg="images/tercera_barra.jpg">
+              <div class="swiper-caption swiper-parallax" data-speed="0.5" data-fade="true">
                 <div class="swiper-slide-caption">
                   <div class="container">
                     <div class="row justify-content-xl-center">
                       <div class="col-xl-12">
-                        <div class="text-extra-big font-weight-bold font-italic text-uppercase" data-caption-animate="fadeInUp" data-caption-delay="300">You can go the distance</div>
+                        <div class="text-extra-big font-weight-bold font-italic text-uppercase" data-caption-animate="fadeInUp" data-caption-delay="300">Puedes ir más allá</div>
                       </div>
                       <div class="col-xl-8 offset-top-10">
-                        <h5 class="hidden d-sm-block text-light" data-caption-animate="fadeInUp" data-caption-delay="500">Clients of our gym receive not only necessary equipment for their workouts but also friendly support in achieving their number one training goal.</h5>
-                        <div class="offset-top-20 offset-sm-top-50"><a class="btn btn-danger btn-anis-effect" href="#" data-waypoint-to="#welcome" data-caption-animate="fadeInUp" data-caption-delay="800"><span class="btn-text">get started</span></a></div>
+                        <h5 class="hidden d-sm-block text-light" data-caption-animate="fadeInUp" data-caption-delay="500">Los clientes de nuestro gimnasio no solo reciven lo justo y necesario en cuanto equipamiento, si no que reciben apoyo moral y motivacional para conseguir su meta de entrenamiento
+                        </h5>
+                        <div class="offset-top-20 offset-sm-top-50"><a class="btn btn-danger btn-anis-effect" href="olvidopass-master/index.php" data-waypoint-to="#welcome" data-caption-animate="fadeInUp" data-caption-delay="800"><span class="btn-text">Inscríbete Ahora</span></a></div>
                       </div>
                     </div>
                   </div>
@@ -287,7 +290,7 @@
                 <div class="col-md-6 col-xl-3">
                   <!-- Box Member-->
                   <div class="box-member"><img class="img-fluid" src="images/justin-medeiros-syndicate-crown.jpg" alt=""/>
-                    <h5 class="font-weight-bold offset-top-20"><a href="about-coach.html">Justin Mediros</a> <small class="text-danger">CrossFit</small>
+                    <h5 class="font-weight-bold offset-top-20"><a href="about-coach.php">Justin Mediros</a> <small class="text-danger">CrossFit</small>
                     </h5>
                     <div class="box-member-caption">
                       <div class="box-member-caption-inner">
@@ -304,7 +307,7 @@
                 <div class="col-md-6 col-xl-3 offset-top-66 offset-md-top-0 offset-xl-top-0">
                   <!-- Box Member-->
                   <div class="box-member"><img class="img-fluid" src="images/alexandra.jpg" alt=""/>
-                    <h5 class="font-weight-bold offset-top-20"><a href="about-coach.html">Alexandra Gómez</a> <small class="text-danger">Fitness</small>
+                    <h5 class="font-weight-bold offset-top-20"><a href="about-coach.php">Alexandra Gómez</a> <small class="text-danger">Fitness</small>
                     </h5>
                     <div class="box-member-caption">
                       <div class="box-member-caption-inner">
@@ -321,7 +324,7 @@
                 <div class="col-md-6 col-xl-3 offset-top-66 offset-xl-top-0">
                   <!-- Box Member-->
                   <div class="box-member"><img class="img-fluid" src="images/descarga.jpg" alt=""/>
-                    <h5 class="font-weight-bold offset-top-20"><a href="about-coach.html">Belen Juarez</a> <small class="text-danger">Yoga</small>
+                    <h5 class="font-weight-bold offset-top-20"><a href="about-coach.php">Belen Juarez</a> <small class="text-danger">Yoga</small>
                     </h5>
                     <div class="box-member-caption">
                       <div class="box-member-caption-inner">
@@ -338,7 +341,7 @@
                 <div class="col-md-6 col-xl-3 offset-top-66 offset-xl-top-0">
                   <!-- Box Member-->
                   <div class="box-member"><img class="img-fluid" src="images/swasenager.jpg" alt=""/>
-                    <h5 class="font-weight-bold offset-top-20"><a href="about-coach.html">Arnold Schwarzenegger</a> <small class="text-danger">Bodybuilding</small>
+                    <h5 class="font-weight-bold offset-top-20"><a href="about-coach.php">Arnold Schwarzenegger</a> <small class="text-danger">Bodybuilding</small>
                     </h5>
                     <div class="box-member-caption">
                       <div class="box-member-caption-inner">
@@ -352,7 +355,7 @@
                   </div>
                   <p class="offset-xl-top-0 text-muted">¿Quién no conoce a Arnold hoy en día? gran actor y también un amante del Bodybuilding perfecto para enseñar a principiantes</p>
                 </div>
-              </div><a class="offset-top-66 btn btn-danger" href="about-coach.html">Ver entrenadores</a>
+              </div><a class="offset-top-66 btn btn-danger" href="about-coach.php">Ver entrenadores</a>
             </div>
           </div>
         </div>
@@ -395,7 +398,7 @@
                </div>
                 <div class="col-sm-10 col-md-3 offset-top-66 order-md-1 offset-md-top-0 col-md-6 col-xl-3 order-xl-1">
                   <!-- Footer brand-->
-                  <div class="footer-brand"><a href="index.html"><img width='173' height='30' src='images/logo.png' alt=''/></a></div>
+                  <div class="footer-brand"><a href="index2.php"><img width='173' height='30' src='images/logo.png' alt=''/></a></div>
                   <div class="offset-top-50 text-sm-center text-xl-left">
             
                   </div>
