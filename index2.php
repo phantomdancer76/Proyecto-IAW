@@ -90,7 +90,7 @@
                     <div class="rd-navbar-mobile-brand"><a href="index.html"><img width='173' height='30' src='images/logo.png' alt=''/></a></div>
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="active"><a href="index.html"><span>Inicio</span></a></li>
+                      <li class="active"><a href="index2.php"><span>Inicio</span></a></li>
                       <li><a href="about-coach.html"><span>Entrenadores</span></a></li>
                       <li><a href="<?php if ($_SESSION['role'] === 'admin'){
                         $redirect = "./carrito-master/admin/index.php";
@@ -98,8 +98,8 @@
                         $redirect = "./carrito-master/index.php";
                       }
                       echo $redirect?>"><span>Tienda Online</span></a></li>
-                      <li><a href="contacts.html"><span>Información de usuario</span></a></li>
-                      <li><a href="olvidopass-master/userDashboard.php"><?php echo $_SESSION['email']?></a></li>
+                      <li><a href="featured.php"><span>Productos destacados</span></a></li>
+                      <li><a href="olvidopass-master/index.php"><?php echo $_SESSION['email']?></a></li>
                       <li><a href="./olvidopass-master/userAccount.php?logoutSubmit=1" class="logout">Logout</a></li>
                     </ul>
                   </div>
@@ -173,7 +173,7 @@
       <!--Welcome-->
       <section class="section-98 section-md-110 novi-background" data-preset='{"title":"Content block 1","category":"content","id":"content-block-1"}'>
         <div class="container">
-          <h1>Bienvenido </h1>
+          <h1>¡Bienvenido!</h1>
           <hr class="divider bg-red">
           <div class="row justify-content-sm-center offset-top-66">
             <div class="col-xl-8">
@@ -210,40 +210,40 @@
         <div class="owl-carousel owl-carousel-default d-lg-none-owl-dots veil-owl-nav d-lg-owl-nav" data-items="1" data-sm-items="2" data-lg-items="3" data-xl-items="4" data-nav="true" data-dots="true" data-nav-class="[&quot;owl-prev mdi mdi-chevron-left&quot;, &quot;owl-next mdi mdi-chevron-right&quot;]">
           <div>
             <!-- Thumbnail Terry-->
-            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/hombre-bodybuilding-768x500.png" alt=""/></a>
+            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/hombre-bodybuilding-768x500.jpg" alt=""/></a>
               <figcaption>
                 <div>
                   <h4 class="thumbnail-terry-title">Bodybuilding</h4>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="#">Primera clase gratuita</a>
+                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="olvidopass-master/index.php">Primera clase gratuita</a>
               </figcaption>
             </figure>
           </div>
           <div>
             <!-- Thumbnail Terry-->
-            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/mujerfitness.jpg" alt=""/></a>
+            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/fitness-mujer-web-e1581957581598.jpg" alt=""/></a>
               <figcaption>
                 <div>
                   <h4 class="thumbnail-terry-title">Fitness</h4>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="#">Primera clase gratuita</a>
+                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="olvidopass-master/index.php">Primera clase gratuita</a>
               </figcaption>
             </figure>
           </div>
           <div>
             <!-- Thumbnail Terry-->
-            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/para_crossfit.jpg" alt=""/></a>
+            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/diesel-fitness-box-23.jpg" alt=""/></a>
               <figcaption>
                 <div>
                   <h4 class="thumbnail-terry-title">Crossfit</h4>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="#">Primera clase gratuita</a>
+                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="olvidopass-master/index.php">Primera clase gratuita</a>
               </figcaption>
             </figure>
           </div>
           <div>
             <!-- Thumbnail Terry-->
-            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/mejores-clases-ejericio-colectivas-en-grupo-gimnasio-powerpump-1.jpg" alt=""/></a>
+            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/mejores-clases-ejericio-colectiv.jpg" alt=""/></a>
               <figcaption>
                 <div>
                   <h4 class="thumbnail-terry-title">Clases conjuntas</h4>
@@ -254,23 +254,23 @@
           </div>
           <div>
             <!-- Thumbnail Terry-->
-            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/article-duracion-optima-entrenamiento-fuerza-5900c8e5d7bbf.jpeg" alt=""/></a>
+            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/article-duracion-optima-entrenam.jpg" alt=""/></a>
               <figcaption>
                 <div>
                   <h4 class="thumbnail-terry-title">Entrenamiento de fuerza</h4>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="#">Primera clase gratuita</a>
+                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="olvidopass-master/index.php">Primera clase gratuita</a>
               </figcaption>
             </figure>
           </div>
           <div>
             <!-- Thumbnail Terry-->
-            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/ABCSK3N4WUP66TNYP42VYTZFTM.jpg" alt=""/></a>
+            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/yogayoga.jpg" alt=""/></a>
               <figcaption>
                 <div>
                   <h4 class="thumbnail-terry-title">Yoga</h4>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="#">Primera clase gratuita</a>
+                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="olvidopass-master/index.php">Primera clase gratuita</a>
               </figcaption>
             </figure>
           </div>
@@ -286,7 +286,7 @@
               <div class="row">
                 <div class="col-md-6 col-xl-3">
                   <!-- Box Member-->
-                  <div class="box-member"><img class="img-fluid" src="images/user-ryan-jackson-270x270.jpg" alt=""/>
+                  <div class="box-member"><img class="img-fluid" src="images/justin-medeiros-syndicate-crown.jpg" alt=""/>
                     <h5 class="font-weight-bold offset-top-20"><a href="about-coach.html">Justin Mediros</a> <small class="text-danger">CrossFit</small>
                     </h5>
                     <div class="box-member-caption">
@@ -303,7 +303,7 @@
                 </div>
                 <div class="col-md-6 col-xl-3 offset-top-66 offset-md-top-0 offset-xl-top-0">
                   <!-- Box Member-->
-                  <div class="box-member"><img class="img-fluid" src="images/user-emily-perkins-270x270.jpg" alt=""/>
+                  <div class="box-member"><img class="img-fluid" src="images/alexandra.jpg" alt=""/>
                     <h5 class="font-weight-bold offset-top-20"><a href="about-coach.html">Alexandra Gómez</a> <small class="text-danger">Fitness</small>
                     </h5>
                     <div class="box-member-caption">
@@ -316,12 +316,12 @@
                       </div>
                     </div>
                   </div>
-                  <p class="offset-xl-top-0 text-muted">Emily can teach you all peculiarities of fitness and aerobics in a group or individually.</p>
+                  <p class="offset-xl-top-0 text-muted">Campeona mundial de fitness collection de 2017 con más de 12 años de experiencia en fitness</p>
                 </div>
                 <div class="col-md-6 col-xl-3 offset-top-66 offset-xl-top-0">
                   <!-- Box Member-->
-                  <div class="box-member"><img class="img-fluid" src="images/user-samantha-ruiz-270x270.jpg" alt=""/>
-                    <h5 class="font-weight-bold offset-top-20"><a href="about-coach.html">Samantha Ruiz</a> <small class="text-danger">Yoga</small>
+                  <div class="box-member"><img class="img-fluid" src="images/descarga.jpg" alt=""/>
+                    <h5 class="font-weight-bold offset-top-20"><a href="about-coach.html">Belen Juarez</a> <small class="text-danger">Yoga</small>
                     </h5>
                     <div class="box-member-caption">
                       <div class="box-member-caption-inner">
@@ -333,12 +333,12 @@
                       </div>
                     </div>
                   </div>
-                  <p class="offset-xl-top-0 text-muted">Our leading yoga coach, Samantha, will help you reach full harmony with your body.</p>
+                  <p class="offset-xl-top-0 text-muted">Nuestra mejor monitora de yoga orientada a principiantes y con capacidad para hacer sufrir a los más expertos, siempre desde una agradable sonrisa</p>
                 </div>
                 <div class="col-md-6 col-xl-3 offset-top-66 offset-xl-top-0">
                   <!-- Box Member-->
-                  <div class="box-member"><img class="img-fluid" src="images/user-austin-ortiz-270x270.jpg" alt=""/>
-                    <h5 class="font-weight-bold offset-top-20"><a href="about-coach.html">Austin Ortiz</a> <small class="text-danger">Bodybuilding</small>
+                  <div class="box-member"><img class="img-fluid" src="images/swasenager.jpg" alt=""/>
+                    <h5 class="font-weight-bold offset-top-20"><a href="about-coach.html">Arnold Schwarzenegger</a> <small class="text-danger">Bodybuilding</small>
                     </h5>
                     <div class="box-member-caption">
                       <div class="box-member-caption-inner">
@@ -350,20 +350,20 @@
                       </div>
                     </div>
                   </div>
-                  <p class="offset-xl-top-0 text-muted">Austin is not only our most called-for coach, but also a winner of many championships.</p>
+                  <p class="offset-xl-top-0 text-muted">¿Quién no conoce a Arnold hoy en día? gran actor y también un amante del Bodybuilding perfecto para enseñar a principiantes</p>
                 </div>
-              </div><a class="offset-top-66 btn btn-danger" href="about-coach.html">view all coaches</a>
+              </div><a class="offset-top-66 btn btn-danger" href="about-coach.html">Ver entrenadores</a>
             </div>
           </div>
         </div>
       </section>
       <!-- Testimonials-->
       <section data-preset='{"title":"Testimonials","category":"content, testimonials, parallax","reload":true,"id":"testimonials"}'>
-        <div class="parallax-container" data-parallax-img="images/background-05-1920x850.jpg">
+        <div class="parallax-container" data-parallax-img="images/testimonial_oscar.jpg">
           <div class="parallax-content">
             <div class="bg-overlay-gray-darkest context-dark">
               <div class="container section-98 section-md-110">
-                <h1>Testimonials</h1>
+                <h1>Opinion Destacada</h1>
                 <hr class="divider bg-white">
                 <div class="row justify-content-sm-center">
                   <div class="col-md-8">
@@ -371,20 +371,11 @@
                     <div class="owl-carousel owl-carousel-testimonials-2" data-items="1" data-nav="true" data-dots="false" data-nav-class="[&quot;owl-prev mdi mdi-chevron-left&quot;, &quot;owl-next mdi mdi-chevron-right&quot;]">
                       <div>
                         <blockquote class="quote quote-slider-3">
-                          <p class="quote-body">I came here to acquire the shape of my body I had half a year ago. I was quite surprised with a range of services they offered me at Intense Gym. Moreover, you can benefit from their group training</p><img class="quote-img rounded-circle" width="80" height="80" src="images/user-alisa-milano-80x80.jpg" alt="Alice Wilson"/>
+                          <p class="quote-body">Desde que me apunté a este gimnasio, mi vida a mejorado muchísimo, fui capaz de conseguir mis objetivos gracias al equipazo de profesionales que se gastan los del Intense Free Gym, para que veais si he mejorado, he podido acabar la página web que mandó Juan para el proyecto de fin de curso</p><img class="quote-img rounded-circle" width="80" height="80" src="images/oscar.png" alt="oscar"/>
                           <p class="font-weight-bold quote-author">
-                            <cite class="text-normal">Alice Wilson</cite>
+                            <cite class="text-normal">Óscar Álvarez</cite>
                           </p>
-                          <p class="quote-desc text-gray">Regular Client</p>
-                        </blockquote>
-                      </div>
-                      <div>
-                        <blockquote class="quote quote-slider-3">
-                          <p class="quote-body">I have had the phenomenal pleasure of working out with Intense Gym coaches as a client and friend throughout the last year. Their magnetic personalities ensure that a friendship will inevitably develop throughout the training course.</p><img class="quote-img rounded-circle" width="80" height="80" src="images/user-july-mao-80x80.jpg" alt="Julie Smith"/>
-                          <p class="font-weight-bold quote-author">
-                            <cite class="text-normal">Julie Smith</cite>
-                          </p>
-                          <p class="quote-desc text-gray">Regular Client</p>
+                          <p class="quote-desc text-gray">Cliente Habitual (como en el comedia)</p>
                         </blockquote>
                       </div>
                     </div>
@@ -401,67 +392,15 @@
           <div class="row justify-content-md-center text-xl-left">
             <div class="col-md-12">
               <div class="row justify-content-sm-center">
-                <div class="col-sm-10 col-md-3 text-left order-md-4 col-md-10 col-xl-3 offset-md-top-50 offset-xl-top-0 order-xl-2">
-                  <!-- Twitter Feed-->
-                  <p class="text-uppercase text-spacing-60 font-weight-bold text-center text-xl-left">Twitter Feed</p>
-                  <div class="offset-top-20">
-                          <div class="twitter" data-twitter-username="templatemonster" data-twitter-date-hours=" hours ago" data-twitter-date-minutes=" minutes ago">
-                            <div class="twitter-sm" data-twitter-type="tweet">
-                              <div class="twitter-date text-dark small"><span class="icon icon-xxs mdi mdi-twitter text-middle"></span> <span class="text-middle" data-date="text"></span>
-                              </div>
-                              <div class="twitter-text" data-tweet="text"></div>
-                              <div class="twitter-name font-weight-bold big" data-screen_name="text"></div>
-                            </div>
-                            <div class="twitter-sm" data-twitter-type="tweet">
-                              <div class="twitter-date text-dark small"><span class="icon icon-xxs mdi mdi-twitter text-middle"></span> <span class="text-middle" data-date="text"></span>
-                              </div>
-                              <div class="twitter-text" data-tweet="text"></div>
-                              <div class="twitter-name font-weight-bold big" data-screen_name="text"></div>
-                            </div>
-                          </div>
-                  </div>
-                </div>
-                <div class="col-sm-10 col-md-3 offset-top-66 order-md-3 col-md-10 col-xl-2 offset-xl-top-0 order-xl-3">
-                  <!-- Flickr Feed-->
-                  <p class="text-uppercase text-spacing-60 font-weight-bold">Gallery</p>
-                  <div class="offset-top-24">
-                          <div class="group-xs flickr widget-flickrfeed" data-lightgallery="group" data-flickr-tags="tm58888_landscapes"><a class="flickr-item thumbnail-classic" data-lightgallery="item" href="" data-image_c="href" data-size="800x800" data-type="flickr-item"><img width="82" height="82" data-title="alt" src="images/_blank.png" alt="" data-image_q="src"></a><a class="flickr-item thumbnail-classic" data-lightgallery="item" href="" data-image_c="href" data-size="800x800" data-type="flickr-item"><img width="82" height="82" data-title="alt" src="images/_blank.png" alt="" data-image_q="src"></a><a class="flickr-item thumbnail-classic" data-lightgallery="item" href="" data-image_c="href" data-size="800x800" data-type="flickr-item"><img width="82" height="82" data-title="alt" src="images/_blank.png" alt="" data-image_q="src"></a><a class="flickr-item thumbnail-classic" data-lightgallery="item" href="" data-image_c="href" data-size="800x800" data-type="flickr-item"><img width="82" height="82" data-title="alt" src="images/_blank.png" alt="" data-image_q="src"></a>
-                          </div>
-                  </div>
-                </div>
-                <div class="col-sm-10 col-md-3 offset-top-66 order-md-2 offset-md-top-0 col-md-6 col-xl-4 order-xl-4">
-                  <div class="inset-xl-left-20">
-                    <p class="text-uppercase text-spacing-60 font-weight-bold">Newsletter</p>
-                    <p class="offset-top-20 text-left">
-                      Keep up with our always upcoming  news and updates. Enter your e-mail and
-                      subscribe to our newsletter.
-                    </p>
-                    <div class="offset-top-30">
-                            <form class="rd-mailform" data-form-output="form-subscribe-footer" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                              <div class="form-group">
-                                <div class="input-group input-group-sm"><span class="input-group-prepend"><span class="input-group-text input-group-icon"><span class="mdi mdi-email novi-icon"></span></span></span>
-                                  <input class="form-control" placeholder="Type your E-Mail" type="email" name="email" data-constraints="@Required @Email"><span class="input-group-append">
-                                    <button class="btn btn-sm btn-danger" type="submit">Subscribe</button></span>
-                                </div>
-                              </div>
-                              <div class="form-output" id="form-subscribe-footer"></div>
-                            </form>
-                    </div>
-                  </div>
-                </div>
+               </div>
                 <div class="col-sm-10 col-md-3 offset-top-66 order-md-1 offset-md-top-0 col-md-6 col-xl-3 order-xl-1">
                   <!-- Footer brand-->
                   <div class="footer-brand"><a href="index.html"><img width='173' height='30' src='images/logo.png' alt=''/></a></div>
                   <div class="offset-top-50 text-sm-center text-xl-left">
-                          <ul class="list-inline">
-                            <li class="list-inline-item"><a class="novi-icon icon fa fa-facebook icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
-                            <li class="list-inline-item"><a class="novi-icon icon fa fa-twitter icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
-                            <li class="list-inline-item"><a class="novi-icon icon fa fa-google-plus icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
-                            <li class="list-inline-item"><a class="novi-icon icon fa fa-linkedin icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
-                          </ul>
+            
                   </div>
                   <p class="text-darker offset-top-20">Intense Gym &copy; <span id="copyright-year"></span> .
-                    Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">TemplateMonster</a>
+                    Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">Óscar Álvarez Lucas</a>
                   </p>
                 </div>
               </div>

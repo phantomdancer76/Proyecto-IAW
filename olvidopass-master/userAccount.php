@@ -201,7 +201,7 @@ if(isset($_POST['signupSubmit'])){
     $sessData['status']['msg'] = 'Has cerrado la sesión correctamente desde tu cuenta.';
     $_SESSION['sessData'] = $sessData;
 	//redirect to the home page
-    header("Location:index.php");
+    header("Location:../index.html");
 }else{
 	//redirect to the home page
     header("Location:index.php");

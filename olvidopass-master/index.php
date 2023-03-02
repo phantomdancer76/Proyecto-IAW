@@ -36,7 +36,7 @@ if(!empty($sessData['status']['msg'])){
             <p><b>Teléfono: </b><?php echo $userData['phone']; ?></p>
 		</div>
         <?php }else{ ?>
-		<h2 align="center">Ingresa en tu Cuenta</h2>
+		<h2 style="text-align:center">Ingresa en tu Cuenta</h2>
         <?php echo !empty($statusMsg)?'<p class="'.$statusMsgType.'">'.$statusMsg.'</p>':''; ?>
 		<div class="regisFrm">
 			<form action="userAccount.php" method="post">
