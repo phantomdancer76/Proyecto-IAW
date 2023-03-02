@@ -58,7 +58,7 @@ include 'Configuracion.php';
                             $id = $_REQUEST['id'];
                             $_SESSION["id"]=$id;
 
-                            $selectquery = "SELECT id, name, description, price FROM mis_productos WHERE id=$id;";
+                            $selectquery = "SELECT id, name, description, price, image FROM mis_productos WHERE id=$id;";
                             $result = mysqli_query($db , $selectquery) or die(mysqli_error($db));
 
                             //Si es mayor que cero el número de filas obtenidas
@@ -69,6 +69,7 @@ include 'Configuracion.php';
                                     $descripcion = $row["description"];
                                     $precio = $row["price"];
                                     $fecha_actual = date("Y-m-d h:i:s");
+                                    $imagen=$row["image"];
                                 }
                             }
                         }
@@ -92,6 +93,10 @@ include 'Configuracion.php';
 				<div class="form-group">
 					<label>Precio</label>
 					<input type="text" name="precio" placeholder="Precio del Producto" value= "<?php echo $precio; ?>"class="form-control" required>
+				</div>
+                <div class="form-group">
+					<label>foto</label>
+					<input type="text" name="foto" placeholder="Foto" value= "<?php echo $imagen; ?>"class="form-control" required>
 				</div>
                 <button type="submit" class="btn btn-info" name="modify">Actualizar Producto</button>
  			</form>

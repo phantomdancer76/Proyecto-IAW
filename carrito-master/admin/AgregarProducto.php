@@ -63,6 +63,10 @@ include 'Configuracion.php';
 					<label>Precio</label>
 					<input type="text" name="precio" placeholder="Precio del Producto" value= "<?php if(isset($_POST['register'])) { echo $_POST['precio']; } ?>"class="form-control" required>
 				</div>
+                <div class="form-group">
+					<label>Foto</label>
+					<input type="text" name="foto" required="required">Elige un nombre de foto (tiene que estar en la carpeta)</input>
+				</div>
                 <button type="submit" class="btn btn-primary" name="register">Registrar Producto</button>
  			</form>
                 </div>

@@ -39,9 +39,9 @@ if(isset($_POST['register'])){
 		$descripcion = $_POST['descripcion'];
 		$precio = $_POST['precio'];
         $fecha_actual = date("Y-m-d h:i:s");
-
+        $imagen_actual=$_POST['foto'];
         //INSERTAMOS EN LA BASE DE DATOS
-        $query = "INSERT INTO mis_productos(name,description,price,created,modified) VALUES ('$nombre' , '$descripcion' , '$precio' , '$fecha_actual', '$fecha_actual')";
+        $query = "INSERT INTO mis_productos(name,description,price,created,modified,image) VALUES ('$nombre' , '$descripcion' , '$precio' , '$fecha_actual', '$fecha_actual', '$imagen_actual')";
         $resultado = mysqli_query($db , $query) or die(mysqli_error($db));
 
          if (mysqli_affected_rows($db) > 0) {
@@ -77,10 +77,11 @@ if(isset($_POST['register'])){
 		$descripcion = $_POST['descripcion'];
 		$precio = $_POST['precio'];
         $fecha_actual = date("Y-m-d h:i:s");
+        $imagen_actual=$_POST['foto'];
 
 
         //ACTUALIZAMOS EL PRODUCTO EN LA BASE DE DATOS
-        $updatequery = "UPDATE mis_productos SET name = '$nombre', description='$descripcion' , price= '$precio' , modified= '$fecha_actual' WHERE id='$id'";
+        $updatequery = "UPDATE mis_productos SET name = '$nombre', description='$descripcion' , price= '$precio' , modified= '$fecha_actual', image='$imagen_actual' WHERE id='$id'";
         $result1 = mysqli_query($db , $updatequery) or die(mysqli_error($db));
 
         if (mysqli_affected_rows($db) > 0) {
@@ -119,7 +120,7 @@ elseif(isset($_POST['delete'])){ //Se produce un error por lo cual mostramos que
 
         if (mysqli_affected_rows($db) > 0) {
             echo "<script>alert('Producto Eliminado');
-            window.location.href='index.php';</script>";
+            window.location.href='EliminarUnProducto.php';</script>";
         }
         else {
             echo "<script>alert('Se produjo un error. Intenta nuevamente!');</script>";
