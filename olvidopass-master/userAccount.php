@@ -82,7 +82,7 @@ if(isset($_POST['signupSubmit'])){
     $_SESSION['email'] = $email;
     $_SESSION['sessData'] = $sessData;
 	//redirect to the home page
-    header("Location:index.php");
+    header("Location:../index2.php");
 }elseif(isset($_POST['forgotSubmit'])){
 	//check whether email is empty
     if(!empty($_POST['email'])){

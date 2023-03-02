@@ -45,7 +45,7 @@ if(!empty($sessData['status']['msg'])){
 				<div class="send-button">
 					<input type="submit" name="loginSubmit" value="Ingresar">
 				</div>
-				<br><br><a href="forgotPassword.php">¿Olvidaste tu Contraseña?</a>
+				<br><br><a href="../index.html">Volver a la página principal</a>
 			</form>
             <p>¿No tienes cuenta aún? <a href="registration.php">Regístrate aquí</a></p>
 		</div>

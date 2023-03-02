@@ -40,7 +40,6 @@ if(isset($_POST['register'])){
 		$precio = $_POST['precio'];
         $fecha_actual = date("Y-m-d h:i:s");
 
-
         //INSERTAMOS EN LA BASE DE DATOS
         $query = "INSERT INTO mis_productos(name,description,price,created,modified) VALUES ('$nombre' , '$descripcion' , '$precio' , '$fecha_actual', '$fecha_actual')";
         $resultado = mysqli_query($db , $query) or die(mysqli_error($db));
