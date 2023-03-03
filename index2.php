@@ -66,11 +66,9 @@
                   <address class="contact-info text-left"><a href="#"><span class="icon mdi mdi-map-marker-radius novi-icon"></span><span class="text-middle">Calle de la santa fé, Jerez de la Frontera</span></a></address>
                 </div>
                 <div class="right-side">
-                  <ul class="list-inline list-inline-sm">
-                    <li class="list-inline-item"><a class="novi-icon fa fa-facebook" href="#"></a></li>
-                    <li class="list-inline-item"><a class="novi-icon fa fa-twitter" href="#"></a></li>
-                    <li class="list-inline-item"><a class="novi-icon fa fa-google-plus" href="#"></a></li>
-                    <li class="list-inline-item"><a class="novi-icon fa fa-youtube" href="#"></a></li>
+                <ul class="list-inline list-inline-sm">
+                    <li class="list-inline-item"><a class="novi-icon fa fa-twitter" href="https://twitter.com/Phantom20870961"></a></li>
+                    <li class="list-inline-item"><a class="novi-icon fa fa-youtube" href="https://www.youtube.com/@AdolfoTex"></a></li>
                   </ul>
                 </div>
               </div>
@@ -294,11 +292,6 @@
                     </h5>
                     <div class="box-member-caption">
                       <div class="box-member-caption-inner">
-                        <ul class="list-inline list-inline-xs">
-                          <li class="list-inline-item"><a class="novi-icon icon fa fa-facebook icon-xs icon-circle icon-darkest-filled" href="#"></a></li>
-                          <li class="list-inline-item"><a class="novi-icon icon fa fa-twitter icon-xs icon-circle icon-darkest-filled" href="#"></a></li>
-                          <li class="list-inline-item"><a class="novi-icon icon fa fa-google-plus icon-xs icon-circle icon-darkest-filled" href="#"></a></li>
-                        </ul>
                       </div>
                     </div>
                   </div>
@@ -311,11 +304,6 @@
                     </h5>
                     <div class="box-member-caption">
                       <div class="box-member-caption-inner">
-                        <ul class="list-inline list-inline-xs">
-                          <li class="list-inline-item"><a class="novi-icon icon fa fa-facebook icon-xs icon-circle icon-darkest-filled" href="#"></a></li>
-                          <li class="list-inline-item"><a class="novi-icon icon fa fa-twitter icon-xs icon-circle icon-darkest-filled" href="#"></a></li>
-                          <li class="list-inline-item"><a class="novi-icon icon fa fa-google-plus icon-xs icon-circle icon-darkest-filled" href="#"></a></li>
-                        </ul>
                       </div>
                     </div>
                   </div>
@@ -328,11 +316,6 @@
                     </h5>
                     <div class="box-member-caption">
                       <div class="box-member-caption-inner">
-                        <ul class="list-inline list-inline-xs">
-                          <li class="list-inline-item"><a class="novi-icon icon fa fa-facebook icon-xs icon-circle icon-darkest-filled" href="#"></a></li>
-                          <li class="list-inline-item"><a class="novi-icon icon fa fa-twitter icon-xs icon-circle icon-darkest-filled" href="#"></a></li>
-                          <li class="list-inline-item"><a class="novi-icon icon fa fa-google-plus icon-xs icon-circle icon-darkest-filled" href="#"></a></li>
-                        </ul>
                       </div>
                     </div>
                   </div>
@@ -345,11 +328,6 @@
                     </h5>
                     <div class="box-member-caption">
                       <div class="box-member-caption-inner">
-                        <ul class="list-inline list-inline-xs">
-                          <li class="list-inline-item"><a class="novi-icon icon fa fa-facebook icon-xs icon-circle icon-darkest-filled" href="#"></a></li>
-                          <li class="list-inline-item"><a class="novi-icon icon fa fa-twitter icon-xs icon-circle icon-darkest-filled" href="#"></a></li>
-                          <li class="list-inline-item"><a class="novi-icon icon fa fa-google-plus icon-xs icon-circle icon-darkest-filled" href="#"></a></li>
-                        </ul>
                       </div>
                     </div>
                   </div>

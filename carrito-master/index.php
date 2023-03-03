@@ -49,8 +49,8 @@ include 'Configuracion.php';
                 <h1>Tienda de Productos</h1>
                 <a href="VerCarta.php" class="cart-link" title="Ver Carta"><i class="glyphicon glyphicon-shopping-cart"></i></a>
                 <div id="products" class="row list-group">
-                <?php
-                $directorio_image = "../images/";
+                    <?php
+                    $directorio_image = "../images/";
                     if (!empty($_REQUEST["nume"])) {
                         $_REQUEST["nume"] = $_REQUEST["nume"];
                     } else {
@@ -100,30 +100,36 @@ include 'Configuracion.php';
                     } else { ?>
                         <p>Producto(s) no existe.....</p>
                     <?php } ?>
-                    <ul>
+                    <div style="min-width: 80%; justify-content: center; text-align: center" class="item col-lg-4">
+                        <div style="min-width: 80%" class="thumbnail">
                         <?php
-                       if ($_REQUEST["nume"] == "1") {
-                        $_REQUEST["nume"] == "0";
-                        echo  "";
-                    } else {
-                        if ($pagina > 1)
-                            $ant = $_REQUEST["nume"] - 1;
-                        echo "<a class='btn btn-info' aria-label='Previous' href='index.php?nume=1'><span aria-hidden='true'>&laquo;</span><span class='sr-only'>Previous</span></a>";
-                        echo "<li class='page-item '><a class='btn btn-info' href='index.php?nume=" . ($pagina - 1) . "' >" . $ant . "</a></li>";
-                    }
-                    echo "<li class='active'><a class='btn btn-success' >" . $_REQUEST["nume"] . "</a></li>";
-                    $sigui = $_REQUEST["nume"] + 1;
-                    $ultima = $num_registros / $registros;
-                    if ($ultima == $_REQUEST["nume"] + 1) {
-                        $ultima == "";
-                    }
-                    if ($pagina < $paginas && $paginas > 1)
-                        echo "<li class='page-item'><a class='btn btn-info' href='index.php?nume=" . ($pagina + 1) . "'>" . $sigui . "</a></li>";
-                    if ($pagina < $paginas && $paginas > 1)
-                        echo "
-        <li class='page-item'><a class='btn btn-info' aria-label='Next' href='index.php?nume=" . ceil($ultima) . "'><span aria-hidden='true'>&raquo;</span><span class='sr-only'>Next</span></a>
-        </li>";
+                        if ($_REQUEST["nume"] == "1") {
+                            $_REQUEST["nume"] == "0";
+                            echo  "";
+                        } else {
+                            if ($pagina > 1)
+                                $ant = $_REQUEST["nume"] - 1;
+                            echo "<a class='btn btn-info' aria-label='Previous' href='index.php?nume=1'><span aria-hidden='true'>&laquo;</span><span class='sr-only'>Previous</span></a>";
+                            echo "<li class='page-item '><a class='btn btn-info' href='index.php?nume=" . ($pagina - 1) . "' >" . $ant . "</a></li>";
+                        }
+                        echo "<li class='active'><a class='btn btn-success' >" . $_REQUEST["nume"] . "</a></li>";
+                        $sigui = $_REQUEST["nume"] + 1;
+                        $ultima = $num_registros / $registros;
+                        if ($ultima == $_REQUEST["nume"] + 1) {
+                            $ultima == "";
+                        }
+                        if ($pagina < $paginas && $paginas > 1)
+                            echo "<li class='page-item'><a class='btn btn-info' href='index.php?nume=" . ($pagina + 1) . "'>" . $sigui . "</a></li>";
+                        if ($pagina < $paginas && $paginas > 1)
+                            echo "
+            <li class='page-item'><a class='btn btn-info' aria-label='Next' href='index.php?nume=" . ceil($ultima) . "'><span aria-hidden='true'>&raquo;</span><span class='sr-only'>Next</span></a>
+            </li>";
                         ?>
+                        </div>
+                    </div>
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-03-2023 a las 21:18:43
+-- Tiempo de generación: 03-03-2023 a las 20:36:51
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -37,18 +37,19 @@ CREATE TABLE `mis_productos` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   `status` enum('1','0') COLLATE utf8_unicode_ci NOT NULL DEFAULT '1',
-  `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `featured` int(11) NOT NULL COMMENT 'para que salga en productos destacados'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `mis_productos`
 --
 
-INSERT INTO `mis_productos` (`id`, `name`, `description`, `price`, `created`, `modified`, `status`, `image`) VALUES
-(8, 'Bodypump 1 clase', 'Una clase de bodypump para canjearla cuando quieras', 20.00, '2023-02-20 09:29:00', '2023-02-22 04:58:29', '1', '01.jpg'),
-(9, 'Yoga 1 clase', 'Un vale de yoga - 1 clase', 15.00, '2023-02-20 09:29:17', '2023-02-20 09:29:17', '1', '02.jpg'),
-(12, 'Crossfit', 'Vale por 1 clase de crossfit', 35.00, '2023-02-22 04:58:11', '2023-02-22 04:58:11', '1', '03.jpg'),
-(20, 'banco de crossfit', 'es un banco de crossfit no mas', 50.00, '2023-03-02 09:07:56', '2023-03-02 09:15:56', '1', 'para_crossfit.jpg');
+INSERT INTO `mis_productos` (`id`, `name`, `description`, `price`, `created`, `modified`, `status`, `image`, `featured`) VALUES
+(8, 'Bodypump 1 clase', 'Una clase de bodypump para canjearla cuando quieras', 20.00, '2023-02-20 09:29:00', '2023-02-22 04:58:29', '1', '01.jpg', 0),
+(9, 'Yoga 1 clase', 'Un vale de yoga - 1 clase', 15.00, '2023-02-20 09:29:17', '2023-02-20 09:29:17', '1', '02.jpg', 1),
+(12, 'Crossfit', 'Vale por 1 clase de crossfit', 35.00, '2023-02-22 04:58:11', '2023-02-22 04:58:11', '1', '03.jpg', 0),
+(20, 'banco de crossfit', 'es un banco de crossfit no mas', 50.00, '2023-03-02 09:07:56', '2023-03-02 09:15:56', '1', 'para_crossfit.jpg', 1);
 
 -- --------------------------------------------------------
 
