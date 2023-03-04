@@ -29,6 +29,7 @@
             while($row = mysqli_fetch_assoc($result)) {
                 $_SESSION['email']=$row['email'];
                 $_SESSION['id']=$row['id'];
+                $_SESSION['userID']=$row['id'];
                 $_SESSION['first_name']=$row['first_name'];
                 $_SESSION['last_name']=$row['last_name'];
                 $_SESSION['phone']=$row['phone'];

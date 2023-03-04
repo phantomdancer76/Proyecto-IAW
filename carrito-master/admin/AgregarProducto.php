@@ -67,6 +67,13 @@ include 'Configuracion.php';
 					<label>Foto</label>
 					<input type="text" name="foto" required="required">Elige un nombre de foto (tiene que estar en la carpeta)</input>
 				</div>
+                <div class="form-group">
+                    <label for="featured">Destacado</label>
+                <select name="featured" id='featured'>
+					<option value=1>si</option>
+					<option value=0>no</option>
+				</select>
+				</div>
                 <button type="submit" class="btn btn-primary" name="register">Registrar Producto</button>
  			</form>
                 </div>

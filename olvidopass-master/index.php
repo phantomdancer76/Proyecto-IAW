@@ -34,6 +34,7 @@ if(!empty($sessData['status']['msg'])){
 			<p><b>Nombre: </b><?php echo $userData['first_name'].' '.$userData['last_name']; ?></p>
             <p><b>Correo: </b><?php echo $userData['email']; ?></p>
             <p><b>Teléfono: </b><?php echo $userData['phone']; ?></p>
+			<p><b>Tipo de Usuario: </b><?php echo $userData['role'];?></p>
 		</div>
         <?php }else{ ?>
 		<h2 style="text-align:center">Ingresa en tu Cuenta</h2>

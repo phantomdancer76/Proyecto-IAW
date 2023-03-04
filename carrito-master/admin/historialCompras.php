@@ -4,7 +4,8 @@ include 'Configuracion.php';
 <?php
       //start session
       session_start();
-      $iduser = $_SESSION['id'];
+      $iduser = $_SESSION['userID'];
+
       include "../../olvidopass-master/dbConfig.php";
       $selectquery = "SELECT * FROM users WHERE id = $iduser;";
       $result = mysqli_query($mysqli, $selectquery) or die(mysqli_error($mysqli));
@@ -14,6 +15,7 @@ include 'Configuracion.php';
             while($row = mysqli_fetch_assoc($result)) {
                 $_SESSION['email']=$row['email'];
                 $_SESSION['id']=$row['id'];
+                $_SESSION['userID']=$row['id'];
                 $_SESSION['first_name']=$row['first_name'];
                 $_SESSION['last_name']=$row['last_name'];
                 $_SESSION['phone']=$row['phone'];
@@ -86,7 +88,7 @@ include 'Configuracion.php';
                     <tbody>
                         <?php
                         //start session
-                        $iddeusuario = $_SESSION['id'];
+                        $iddeusuario = $_SESSION['userID'];
                         //Incluimos el fichero de configuración para poder conectarnos con la BBDD.
                         include 'Configuracion.php';
                         $selectquery = "SELECT id, total_price, created FROM orden WHERE customer_id = $iddeusuario;";
