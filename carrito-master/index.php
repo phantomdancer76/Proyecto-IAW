@@ -81,7 +81,12 @@ include 'Configuracion.php';
                             <div style="min-width: 80%; justify-content: center; text-align: center" class="item col-lg-4">
                                 <div style="min-width: 80%" class="thumbnail">
                                     <div style="min-width: 80%" class="caption">
-                                        <h4 class="list-group-item-heading"><?php echo $resultados["name"]; ?></h4>
+                                        <h4 class="list-group-item-heading"><?php echo $resultados["name"]; ?><?php 
+                                        if($resultados['featured'] == 1){
+                                            echo '<i class="glyphicon glyphicon-star	
+                                            "></i>';
+                                        }
+                                        ?></h4>
                                         <p class="list-group-item-text"><?php echo $resultados["description"]; ?></p>
                                         <br>
                                         <p class="list-group-item-text"><img width="600px" src="<?php echo $directorio_image.$resultados["image"]?>" alt=""></p>

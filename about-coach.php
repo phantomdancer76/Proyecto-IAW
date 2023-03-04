@@ -48,7 +48,7 @@ function check_admin($admin, $usuario)
       </div>
     </div>
     <!-- Page-->
-    <div class="page text-center"><a class="section section-banner text-center d-none d-xl-block" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" style="background-image: url(images/banner/background-04-1920x60.jpg); background-image: -webkit-image-set( url(images/banner/background-04-1920x60.jpg) 1x, url(images/banner/background-04-3840x120.jpg) 2x )"><img src="images/banner/foreground-04-1600x60.png" srcset="images/banner/foreground-04-1600x60.png 1x, images/banner/foreground-04-3200x120.png 2x" alt="" width="1600" height="310"></a>
+    <div class="page text-center">
       <!-- Page Head-->
       <header class="page-head slider-menu-position" data-preset='{"title":"Header with breadcrumbs","category":"header, breadcrumbs","reload":true,"id":"header-2"}'>
         <!-- RD Navbar Transparent-->
@@ -58,17 +58,15 @@ function check_admin($admin, $usuario)
               <!-- RD Navbar Top Panel-->
               <div class="rd-navbar-top-panel context-dark bg-danger">
                 <div class="left-side">
-                  <address class="contact-info text-left"><a href="tel:#"><span class="icon mdi mdi-cellphone-android novi-icon"></span><span class="text-middle">1-800-1324-567</span></a></address>
+                  <address class="contact-info text-left"><a href="tel:#"><span class="icon mdi mdi-cellphone-android novi-icon"></span><span class="text-middle">671 33 25 46</span></a></address>
                 </div>
                 <div class="center">
-                  <address class="contact-info text-left"><a href="#"><span class="icon mdi mdi-map-marker-radius novi-icon"></span><span class="text-middle">2130 Fulton Street San Francisco, CA 94117-1080 USA</span></a></address>
+                  <address class="contact-info text-left"><a href="#"><span class="icon mdi mdi-map-marker-radius novi-icon"></span><span class="text-middle">Calle de la santa fé, Jerez de la Frontera</span></a></address>
                 </div>
                 <div class="right-side">
                   <ul class="list-inline list-inline-sm">
-                    <li class="list-inline-item"><a class="novi-icon fa fa-facebook" href="#"></a></li>
-                    <li class="list-inline-item"><a class="novi-icon fa fa-twitter" href="#"></a></li>
-                    <li class="list-inline-item"><a class="novi-icon fa fa-google-plus" href="#"></a></li>
-                    <li class="list-inline-item"><a class="novi-icon fa fa-youtube" href="#"></a></li>
+                    <li class="list-inline-item"><a class="novi-icon fa fa-twitter" href="https://twitter.com/Phantom20870961"></a></li>
+                    <li class="list-inline-item"><a class="novi-icon fa fa-youtube" href="https://www.youtube.com/@AdolfoTex"></a></li>
                   </ul>
                 </div>
               </div>
@@ -91,11 +89,11 @@ function check_admin($admin, $usuario)
                     <li><a <?php
                             rutas('index2.php', 'index.html');
                             ?>><span>Inicio</span></a></li>
-                    <li><a <?php
+                    <li class="active"><a <?php
                             rutas("about-coach.php", "about-coach.html");
                             ?>><span>Entrenadores</span></a></li>
-                    <li><a <?php check_admin("index.php", "index.php") ?>>Tienda Online</a></li>
-                    <li class="active"><a href="featured.php"><span>Productos destacados</span></a></li>
+                    <li ><a <?php check_admin("index.php", "index.php") ?>>Tienda Online</a></li>
+                    <li ><a href="featured.php"><span>Productos destacados</span></a></li>
                     <?php
                     if (isset($_SESSION['email'])) {
                       echo '<li><a href="./olvidopass-master/index.php">' . $_SESSION["email"] . '</a></li>';
@@ -116,13 +114,13 @@ function check_admin($admin, $usuario)
         <div class="context-dark">
           <!-- Modern Breadcrumbs-->
           <section>
-            <div class="parallax-container breadcrumb-modern bg-gray-darkest" data-parallax-img="images/background-04-1920x750.jpg">
+            <div class="parallax-container breadcrumb-modern bg-gray-darkest" data-parallax-img="images/804838.jpg">
               <div class="parallax-content"> 
                 <div class="container section-top-98 section-bottom-34 section-lg-bottom-66 section-lg-98 section-xl-top-110 section-xl-bottom-41">
-                  <h2 class="d-none d-lg-block offset-top-30"><span class="big">About Coach</span></h2>
+                  <h2 class="d-none d-lg-block offset-top-30"><span class="big">Entrenadores</span></h2>
                   <ul class="list-inline list-inline-dashed">
-                    <li class="list-inline-item"><a href="index.html">Home</a></li>
-                    <li class="list-inline-item">About Coach
+                    <li class="list-inline-item"><a href="index.html">Juan</a></li>
+                    <li class="list-inline-item">Apruebame
                     </li>
                   </ul>
                 </div>
@@ -137,20 +135,14 @@ function check_admin($admin, $usuario)
           <div class="row justify-content-sm-center">
             <div class="col-sm-10 col-md-5">
               <!-- Member block type 5-->
-              <div class="member-block-type-5 inset-lg-right-20"><img class="img-fluid mx-auto d-block" src="images/user-emily-perkins-437x437.jpg" width="437" height="437" alt=""/>
-                <div class="member-block-body"><a class="btn btn-block btn-danger" href="contacts.html">get in touch</a>
+              <div class="member-block-type-5 inset-lg-right-20"><img class="img-fluid mx-auto d-block" src="images/justin_mediros.jpeg" width="437" height="437" alt=""/>
+                <div class="member-block-body"><a class="btn btn-block btn-danger" href="#">Contactar</a>
                   <div class="offset-top-34">
-                    <ul class="list-inline list-inline-xs">
-                      <li class="list-inline-item"><a class="novi-icon icon icon-xxs icon-circle icon-darkest-filled fa-facebook" href="#"></a></li>
-                      <li class="list-inline-item"><a class="novi-icon icon icon-xxs icon-circle icon-darkest-filled fa-twitter" href="#"></a></li>
-                      <li class="list-inline-item"><a class="novi-icon icon icon-xxs icon-circle icon-darkest-filled fa-google-plus" href="#"></a></li>
-                      <li class="list-inline-item"><a class="novi-icon icon icon-xxs icon-circle icon-darkest-filled fa-linkedin" href="#"></a></li>
-                    </ul>
                   </div>
                   <address class="contact-info offset-top-20 offset-md-top-34">
                     <ul class="list-unstyled p">
-                      <li><span class="novi-icon icon icon-xxs text-middle text-dark mdi mdi-phone"></span><a class="p big text-middle d-inline-block offset-top-0" href="tel:1-800-1234-567">1-800-1234-567</a></li>
-                      <li><span class="novi-icon icon icon-xxs text-middle text-dark mdi mdi-email-open"></span><a class="p big text-middle d-inline-block offset-top-0 text-picton-blue" href="mailto:info@demolink.org">info@demolink.org</a></li>
+                      <li><span class="novi-icon icon icon-xxs text-middle text-dark mdi mdi-phone"></span><a class="p big text-middle d-inline-block offset-top-0" href="tel:1-800-1234-567">671 22 34 54</a></li>
+                      <li><span class="novi-icon icon icon-xxs text-middle text-dark mdi mdi-email-open"></span><a class="p big text-middle d-inline-block offset-top-0 text-picton-blue" href="#">justinmediros@gmail.com</a></li>
                     </ul>
                   </address>
                 </div>
@@ -158,25 +150,25 @@ function check_admin($admin, $usuario)
             </div>
             <div class="col-sm-10 col-md-7 text-md-left">
               <div>
-                <h1 class="text-darker">Emily Perkins</h1>
+                <h1 class="text-darker">Justin Mediros</h1>
               </div>
-              <p class="text-muted offset-top-4">Fitness Coach</p>
+              <p class="text-muted offset-top-4">Entrenador de Crossfit</p>
               <hr class="divider bg-red hr-md-left-0">
-              <p class="offset-top-50 text-left">Emily Perkins is the leading fitness and athletics trainer at Intense Gym. She received a Bachelor’s in Physical Health and Education, and a Master’s in Exercise Science in Los Angeles University.</p>
+              <p class="offset-top-50 text-left">Campeon mundial de crossfit de 2022 con más de 15 años de experiencia en el sector.</p>
               <div class="offset-top-30 text-center">
                 <p>
-                  <q class="font-italic h3 text-regular">I'm glad to help all clients of Intense Gym acquire the proper body shape through fitness.</q>
+                  <q class="font-italic h3 text-regular">El trabajo duro es algo que siempre no nos podemos permitir, los descansos hacen al ser humano fuerte</q>
                 </p>
               </div>
               <div class="offset-top-30">
-                <p class="text-left">Ms. Perkins joined our team in 2010, after winning the local athletics competition. She started her career in sports in 2005, and in a few years she became a well-known trainer in the world of fitness. Her professionalism allows her to find a personalized approach to every client of Intense Gym.</p>
+                <p class="text-left">Justin mediros se unió como plantilla a nuestro gimnasio después de ganar su campeonato, espero que difrutéis de lo que puede hacer realmente este hombre</p>
               </div>
               <div class="offset-top-50">
                 <!-- Linear progress bar-->
-                <div class="progress-linear" data-to="70">
+                <div class="progress-linear" data-to="50">
                   <div class="progress-linear-header clearfix">
                     <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">Fitness</span></div>
-                    <div><span class="big text-ubold pull-right progress-linear-counter">70</span></div>
+                    <div><span class="big text-ubold pull-right progress-linear-counter">50</span></div>
                   </div>
                   <div class="progress-linear-body">
                     <div class="progress-linear-bar bg-success"></div>
@@ -184,10 +176,10 @@ function check_admin($admin, $usuario)
                 </div>
                 <div class="offset-top-50">
                   <!-- Linear progress bar-->
-                  <div class="progress-linear" data-to="54">
+                  <div class="progress-linear" data-to="95">
                     <div class="progress-linear-header clearfix">
                       <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">CrossFIT</span></div>
-                      <div><span class="big text-ubold pull-right progress-linear-counter">54</span></div>
+                      <div><span class="big text-ubold pull-right progress-linear-counter">95</span></div>
                     </div>
                     <div class="progress-linear-body">
                       <div class="progress-linear-bar bg-info"></div>
@@ -196,10 +188,10 @@ function check_admin($admin, $usuario)
                 </div>
                 <div class="offset-top-50">
                   <!-- Linear progress bar-->
-                  <div class="progress-linear" data-to="87">
+                  <div class="progress-linear" data-to="20">
                     <div class="progress-linear-header clearfix">
                       <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">Yoga</span></div>
-                      <div><span class="big text-ubold pull-right progress-linear-counter">87</span></div>
+                      <div><span class="big text-ubold pull-right progress-linear-counter">20</span></div>
                     </div>
                     <div class="progress-linear-body">
                       <div class="progress-linear-bar bg-warning"></div>
@@ -208,10 +200,10 @@ function check_admin($admin, $usuario)
                 </div>
                 <div class="offset-top-50">
                   <!-- Linear progress bar-->
-                  <div class="progress-linear" data-to="65">
+                  <div class="progress-linear" data-to="70">
                     <div class="progress-linear-header clearfix">
                       <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">Bodybuilding</span></div>
-                      <div><span class="big text-ubold pull-right progress-linear-counter">65</span></div>
+                      <div><span class="big text-ubold pull-right progress-linear-counter">70</span></div>
                     </div>
                     <div class="progress-linear-body">
                       <div class="progress-linear-bar bg-danger"></div>
@@ -219,81 +211,272 @@ function check_admin($admin, $usuario)
                   </div>
                 </div>
               </div>
+              
             </div>
           </div>
         </div>
       </section>
-      <!-- Offers-->
-      <section class="section-bottom-66 section-xl-bottom-0" data-preset='{"title":"Carousel 2","category":"content, carousel","reload":true,"id":"carousel-2"}'>
-        <div class="owl-carousel owl-carousel-default veil-lg-owl-dots veil-owl-nav reveal-lg-owl-nav" data-items="1" data-sm-items="2" data-lg-items="3" data-xl-items="4" data-nav="true" data-dots="true" data-nav-class="[&quot;owl-prev mdi mdi-chevron-left&quot;, &quot;owl-next mdi mdi-chevron-right&quot;]">
-          <div>
-            <!-- Thumbnail Terry-->
-            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/about-01-480x480.jpg" alt=""/></a>
-              <figcaption>
-                <div>
-                  <h4 class="thumbnail-terry-title"></h4>
+      <!-- About-->
+      <section class="section-98 section-md-110 novi-background" data-preset='{"title":"Content block 2","category":"content","reload":true,"id":"content-block-2"}'>
+        <div class="container">
+          <div class="row justify-content-sm-center">
+            <div class="col-sm-10 col-md-5">
+              <!-- Member block type 5-->
+              <div class="member-block-type-5 inset-lg-right-20"><img class="img-fluid mx-auto d-block" src="images/alexandra_gomez.jpg" width="437" height="437" alt=""/>
+                <div class="member-block-body"><a class="btn btn-block btn-danger" href="#">Contactar</a>
+                  <div class="offset-top-34">
+                  </div>
+                  <address class="contact-info offset-top-20 offset-md-top-34">
+                    <ul class="list-unstyled p">
+                      <li><span class="novi-icon icon icon-xxs text-middle text-dark mdi mdi-phone"></span><a class="p big text-middle d-inline-block offset-top-0" href="tel:1-800-1234-567">676 78 34 25</a></li>
+                      <li><span class="novi-icon icon icon-xxs text-middle text-dark mdi mdi-email-open"></span><a class="p big text-middle d-inline-block offset-top-0 text-picton-blue" href="#">alexandra_gomez@gmail.com</a></li>
+                    </ul>
+                  </address>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="#">free first lesson</a>
-              </figcaption>
-            </figure>
-          </div>
-          <div>
-            <!-- Thumbnail Terry-->
-            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/about-02-480x480.jpg" alt=""/></a>
-              <figcaption>
-                <div>
-                  <h4 class="thumbnail-terry-title"></h4>
+              </div>
+            </div>
+            <div class="col-sm-10 col-md-7 text-md-left">
+              <div>
+                <h1 class="text-darker">Alexandra Gómez</h1>
+              </div>
+              <p class="text-muted offset-top-4">Entrenadora de Fitness</p>
+              <hr class="divider bg-red hr-md-left-0">
+              <p class="offset-top-50 text-left">Campeona mundial de fitness collection de 2017 con más de 12 años de experiencia en fitness.</p>
+              <div class="offset-top-30 text-center">
+                <p>
+                  <q class="font-italic h3 text-regular">Haz del fitness, un básico en tu vida, Bassic Fit</q>
+                </p>
+              </div>
+              <div class="offset-top-30">
+                <p class="text-left">Alexandra Gómez también fue monitora del gimnasio Basic Fit, pero se ve que el nuestro le gusta más.</p>
+              </div>
+              <div class="offset-top-50">
+                <!-- Linear progress bar-->
+                <div class="progress-linear" data-to="100">
+                  <div class="progress-linear-header clearfix">
+                    <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">Fitness</span></div>
+                    <div><span class="big text-ubold pull-right progress-linear-counter">100</span></div>
+                  </div>
+                  <div class="progress-linear-body">
+                    <div class="progress-linear-bar bg-success"></div>
+                  </div>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="#">free first lesson</a>
-              </figcaption>
-            </figure>
-          </div>
-          <div>
-            <!-- Thumbnail Terry-->
-            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/about-03-480x480.jpg" alt=""/></a>
-              <figcaption>
-                <div>
-                  <h4 class="thumbnail-terry-title"></h4>
+                <div class="offset-top-50">
+                  <!-- Linear progress bar-->
+                  <div class="progress-linear" data-to="65">
+                    <div class="progress-linear-header clearfix">
+                      <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">CrossFIT</span></div>
+                      <div><span class="big text-ubold pull-right progress-linear-counter">65</span></div>
+                    </div>
+                    <div class="progress-linear-body">
+                      <div class="progress-linear-bar bg-info"></div>
+                    </div>
+                  </div>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="#">free first lesson</a>
-              </figcaption>
-            </figure>
-          </div>
-          <div>
-            <!-- Thumbnail Terry-->
-            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/home-02-480x480.jpg" alt=""/></a>
-              <figcaption>
-                <div>
-                  <h4 class="thumbnail-terry-title"></h4>
+                <div class="offset-top-50">
+                  <!-- Linear progress bar-->
+                  <div class="progress-linear" data-to="40">
+                    <div class="progress-linear-header clearfix">
+                      <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">Yoga</span></div>
+                      <div><span class="big text-ubold pull-right progress-linear-counter">40</span></div>
+                    </div>
+                    <div class="progress-linear-body">
+                      <div class="progress-linear-bar bg-warning"></div>
+                    </div>
+                  </div>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="#">free first lesson</a>
-              </figcaption>
-            </figure>
-          </div>
-          <div>
-            <!-- Thumbnail Terry-->
-            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/home-01-480x480.jpg" alt=""/></a>
-              <figcaption>
-                <div>
-                  <h4 class="thumbnail-terry-title"></h4>
+                <div class="offset-top-50">
+                  <!-- Linear progress bar-->
+                  <div class="progress-linear" data-to="30">
+                    <div class="progress-linear-header clearfix">
+                      <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">Bodybuilding</span></div>
+                      <div><span class="big text-ubold pull-right progress-linear-counter">30</span></div>
+                    </div>
+                    <div class="progress-linear-body">
+                      <div class="progress-linear-bar bg-danger"></div>
+                    </div>
+                  </div>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="#">free first lesson</a>
-              </figcaption>
-            </figure>
-          </div>
-          <div>
-            <!-- Thumbnail Terry-->
-            <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/home-03-480x480.jpg" alt=""/></a>
-              <figcaption>
-                <div>
-                  <h4 class="thumbnail-terry-title"></h4>
-                </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="#">free first lesson</a>
-              </figcaption>
-            </figure>
+              </div>
+              
+            </div>
           </div>
         </div>
-      </section><a class="section section-banner" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" style="background-image: url(images/banner/background-03-1920x310.jpg); background-image: -webkit-image-set( url(images/banner/background-03-1920x310.jpg) 1x, url(images/banner/background-03-3840x620.jpg) 2x )"><img src="images/banner/foreground-03-1600x310.png" srcset="images/banner/foreground-03-1600x310.png 1x, images/banner/foreground-03-3200x620.png 2x" alt="" width="1600" height="310"></a>
+      </section>
+      <!-- About-->
+      <section class="section-98 section-md-110 novi-background" data-preset='{"title":"Content block 2","category":"content","reload":true,"id":"content-block-2"}'>
+        <div class="container">
+          <div class="row justify-content-sm-center">
+            <div class="col-sm-10 col-md-5">
+              <!-- Member block type 5-->
+              <div class="member-block-type-5 inset-lg-right-20"><img class="img-fluid mx-auto d-block" src="images/belen_juarez.jpeg" width="437" height="437" alt=""/>
+                <div class="member-block-body"><a class="btn btn-block btn-danger" href="#">Contactar</a>
+                  <div class="offset-top-34">
+                  </div>
+                  <address class="contact-info offset-top-20 offset-md-top-34">
+                    <ul class="list-unstyled p">
+                      <li><span class="novi-icon icon icon-xxs text-middle text-dark mdi mdi-phone"></span><a class="p big text-middle d-inline-block offset-top-0" href="tel:1-800-1234-567">676 76 54 23</a></li>
+                      <li><span class="novi-icon icon icon-xxs text-middle text-dark mdi mdi-email-open"></span><a class="p big text-middle d-inline-block offset-top-0 text-picton-blue" href="#">belenJrz@gmail.com</a></li>
+                    </ul>
+                  </address>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-10 col-md-7 text-md-left">
+              <div>
+                <h1 class="text-darker">Belen Juárez</h1>
+              </div>
+              <p class="text-muted offset-top-4">Monitora de Yoga</p>
+              <hr class="divider bg-red hr-md-left-0">
+              <p class="offset-top-50 text-left">Nuestra mejor monitora de yoga orientada a principiantes y con capacidad para hacer sufrir a los más expertos, siempre desde una agradable sonrisa.</p>
+              <div class="offset-top-30 text-center">
+                <p>
+                  <q class="font-italic h3 text-regular">En nuestra vida es importante ser flexibles en las decisiones que tomamos, lo mismo con el cuerpo, un cuerpo flexible es un cuerpo sano</q>
+                </p>
+              </div>
+              <div class="offset-top-30">
+                <p class="text-left">Belen Juarez se unió a nuestra plantilla, para devolveros eso que creíais perdido o que no teníais, la flexibilidad corporal y la relajación.</p>
+              </div>
+              <div class="offset-top-50">
+                <!-- Linear progress bar-->
+                <div class="progress-linear" data-to="30">
+                  <div class="progress-linear-header clearfix">
+                    <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">Fitness</span></div>
+                    <div><span class="big text-ubold pull-right progress-linear-counter">30</span></div>
+                  </div>
+                  <div class="progress-linear-body">
+                    <div class="progress-linear-bar bg-success"></div>
+                  </div>
+                </div>
+                <div class="offset-top-50">
+                  <!-- Linear progress bar-->
+                  <div class="progress-linear" data-to="20">
+                    <div class="progress-linear-header clearfix">
+                      <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">CrossFIT</span></div>
+                      <div><span class="big text-ubold pull-right progress-linear-counter">20</span></div>
+                    </div>
+                    <div class="progress-linear-body">
+                      <div class="progress-linear-bar bg-info"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="offset-top-50">
+                  <!-- Linear progress bar-->
+                  <div class="progress-linear" data-to="100">
+                    <div class="progress-linear-header clearfix">
+                      <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">Yoga</span></div>
+                      <div><span class="big text-ubold pull-right progress-linear-counter">100</span></div>
+                    </div>
+                    <div class="progress-linear-body">
+                      <div class="progress-linear-bar bg-warning"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="offset-top-50">
+                  <!-- Linear progress bar-->
+                  <div class="progress-linear" data-to="15">
+                    <div class="progress-linear-header clearfix">
+                      <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">Bodybuilding</span></div>
+                      <div><span class="big text-ubold pull-right progress-linear-counter">15</span></div>
+                    </div>
+                    <div class="progress-linear-body">
+                      <div class="progress-linear-bar bg-danger"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About-->
+      <section class="section-98 section-md-110 novi-background" data-preset='{"title":"Content block 2","category":"content","reload":true,"id":"content-block-2"}'>
+        <div class="container">
+          <div class="row justify-content-sm-center">
+            <div class="col-sm-10 col-md-5">
+              <!-- Member block type 5-->
+              <div class="member-block-type-5 inset-lg-right-20"><img class="img-fluid mx-auto d-block" src="images/arnold.jpg" width="437" height="437" alt=""/>
+                <div class="member-block-body"><a class="btn btn-block btn-danger" href="#">Contactar</a>
+                  <div class="offset-top-34">
+                  </div>
+                  <address class="contact-info offset-top-20 offset-md-top-34">
+                    <ul class="list-unstyled p">
+                      <li><span class="novi-icon icon icon-xxs text-middle text-dark mdi mdi-phone"></span><a class="p big text-middle d-inline-block offset-top-0" href="tel:1-800-1234-567">678 69 69 69</a></li>
+                      <li><span class="novi-icon icon icon-xxs text-middle text-dark mdi mdi-email-open"></span><a class="p big text-middle d-inline-block offset-top-0 text-picton-blue" href="#">arnoldSchz@gmail.com</a></li>
+                    </ul>
+                  </address>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-10 col-md-7 text-md-left">
+              <div>
+                <h1 class="text-darker">Arnold Schwarzenegger</h1>
+              </div>
+              <p class="text-muted offset-top-4">Entrenador de Bodybuilding</p>
+              <hr class="divider bg-red hr-md-left-0">
+              <p class="offset-top-50 text-left">¿Quién no conoce a Arnold hoy en día? gran actor y también un amante del Bodybuilding perfecto para enseñar a principiantes.</p>
+              <div class="offset-top-30 text-center">
+                <p>
+                  <q class="font-italic h3 text-regular">La genética es importante, pero no lo es todo, te demostraré con hechos lo que muchos no han hecho con palabras.</q>
+                </p>
+              </div>
+              <div class="offset-top-30">
+                <p class="text-left">Arnold se unió a nuestra plantilla después de ser una estrella del cine y tener un físico privilegiado</p>
+              </div>
+              <div class="offset-top-50">
+                <!-- Linear progress bar-->
+                <div class="progress-linear" data-to="30">
+                  <div class="progress-linear-header clearfix">
+                    <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">Fitness</span></div>
+                    <div><span class="big text-ubold pull-right progress-linear-counter">30</span></div>
+                  </div>
+                  <div class="progress-linear-body">
+                    <div class="progress-linear-bar bg-success"></div>
+                  </div>
+                </div>
+                <div class="offset-top-50">
+                  <!-- Linear progress bar-->
+                  <div class="progress-linear" data-to="20">
+                    <div class="progress-linear-header clearfix">
+                      <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">CrossFIT</span></div>
+                      <div><span class="big text-ubold pull-right progress-linear-counter">20</span></div>
+                    </div>
+                    <div class="progress-linear-body">
+                      <div class="progress-linear-bar bg-info"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="offset-top-50">
+                  <!-- Linear progress bar-->
+                  <div class="progress-linear" data-to="0">
+                    <div class="progress-linear-header clearfix">
+                      <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">Yoga</span></div>
+                      <div><span class="big text-ubold pull-right progress-linear-counter">0</span></div>
+                    </div>
+                    <div class="progress-linear-body">
+                      <div class="progress-linear-bar bg-warning"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="offset-top-50">
+                  <!-- Linear progress bar-->
+                  <div class="progress-linear" data-to="100">
+                    <div class="progress-linear-header clearfix">
+                      <div><span class="progress-linear-title p text-ubold pull-left text-uppercase">Bodybuilding</span></div>
+                      <div><span class="big text-ubold pull-right progress-linear-counter">100</span></div>
+                    </div>
+                    <div class="progress-linear-body">
+                      <div class="progress-linear-bar bg-danger"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Page Footer-->
       <footer class="section-relative section-top-66 section-bottom-34 page-footer bg-gray-base context-dark novi-background" data-preset='{"title":"Footer","category":"footer","reload":true,"id":"footer"}'>
         <div class="container">

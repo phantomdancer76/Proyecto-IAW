@@ -167,7 +167,7 @@ function check_admin($admin, $usuario)
             echo "<h1>$nombreprod</h1>";
             echo "<img width='500px' height='auto'src='images/$imagen'>";
             echo "<p>$descripcionprod</p>";
-            echo "<p>$precioprod</p>";
+            echo "<p>$precioprod €</p>";
             if (isset($_SESSION['role'])) {
               if ($_SESSION['role'] == 'admin') {
                 echo "<a class='btn btn-success' href='./carrito-master/admin/AccionCarta.php?action=addToCart&id=$idprod'>Enviar al Carrito</a>";
