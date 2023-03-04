@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-03-2023 a las 20:36:51
+-- Tiempo de generación: 04-03-2023 a las 20:43:35
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -29,8 +29,8 @@ USE `logtest`;
 -- Estructura de tabla para la tabla `mis_productos`
 --
 
-CREATE TABLE `mis_productos` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `mis_productos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `price` float(10,2) NOT NULL,
@@ -38,18 +38,18 @@ CREATE TABLE `mis_productos` (
   `modified` datetime NOT NULL,
   `status` enum('1','0') COLLATE utf8_unicode_ci NOT NULL DEFAULT '1',
   `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `featured` int(11) NOT NULL COMMENT 'para que salga en productos destacados'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `featured` int(11) NOT NULL COMMENT 'para que salga en productos destacados',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `mis_productos`
 --
 
 INSERT INTO `mis_productos` (`id`, `name`, `description`, `price`, `created`, `modified`, `status`, `image`, `featured`) VALUES
-(8, 'Bodypump 1 clase', 'Una clase de bodypump para canjearla cuando quieras', 20.00, '2023-02-20 09:29:00', '2023-02-22 04:58:29', '1', '01.jpg', 0),
+(8, 'Bodypump 1 clase', 'Una clase de bodypump para canjearla cuando quieras', 20.00, '2023-02-20 09:29:00', '2023-03-04 08:30:27', '1', '01.jpg', 1),
 (9, 'Yoga 1 clase', 'Un vale de yoga - 1 clase', 15.00, '2023-02-20 09:29:17', '2023-02-20 09:29:17', '1', '02.jpg', 1),
-(12, 'Crossfit', 'Vale por 1 clase de crossfit', 35.00, '2023-02-22 04:58:11', '2023-02-22 04:58:11', '1', '03.jpg', 0),
-(20, 'banco de crossfit', 'es un banco de crossfit no mas', 50.00, '2023-03-02 09:07:56', '2023-03-02 09:15:56', '1', 'para_crossfit.jpg', 1);
+(12, 'Crossfit', 'Vale por 1 clase de crossfit', 35.00, '2023-02-22 04:58:11', '2023-03-04 08:30:41', '1', '03.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -57,14 +57,16 @@ INSERT INTO `mis_productos` (`id`, `name`, `description`, `price`, `created`, `m
 -- Estructura de tabla para la tabla `orden`
 --
 
-CREATE TABLE `orden` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `orden` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_id` int(11) NOT NULL,
   `total_price` float(10,2) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
-  `status` enum('1','0') COLLATE utf8_unicode_ci NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `status` enum('1','0') COLLATE utf8_unicode_ci NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`),
+  KEY `customer_id` (`customer_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `orden`
@@ -78,7 +80,10 @@ INSERT INTO `orden` (`id`, `customer_id`, `total_price`, `created`, `modified`, 
 (24, 14, 35.00, '2023-02-22 13:13:49', '2023-02-22 13:13:49', '1'),
 (25, 3, 155.00, '2023-02-22 14:42:56', '2023-02-22 14:42:56', '1'),
 (26, 3, 85.00, '2023-02-23 18:00:54', '2023-02-23 18:00:54', '1'),
-(27, 3, 55.00, '2023-02-24 18:23:51', '2023-02-24 18:23:51', '1');
+(27, 3, 55.00, '2023-02-24 18:23:51', '2023-02-24 18:23:51', '1'),
+(28, 3, 35.00, '2023-03-04 18:19:30', '2023-03-04 18:19:30', '1'),
+(29, 3, 20.00, '2023-03-04 18:32:10', '2023-03-04 18:32:10', '1'),
+(30, 14, 35.00, '2023-03-04 19:04:54', '2023-03-04 19:04:54', '1');
 
 -- --------------------------------------------------------
 
@@ -86,12 +91,14 @@ INSERT INTO `orden` (`id`, `customer_id`, `total_price`, `created`, `modified`, 
 -- Estructura de tabla para la tabla `orden_articulos`
 --
 
-CREATE TABLE `orden_articulos` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `orden_articulos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `quantity` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `quantity` int(5) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `order_id` (`order_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `orden_articulos`
@@ -110,7 +117,12 @@ INSERT INTO `orden_articulos` (`id`, `order_id`, `product_id`, `quantity`) VALUE
 (24, 26, 9, 2),
 (25, 26, 8, 1),
 (26, 27, 9, 1),
-(27, 27, 8, 2);
+(27, 27, 8, 2),
+(28, 28, 8, 1),
+(29, 28, 9, 1),
+(30, 29, 8, 1),
+(31, 30, 9, 1),
+(32, 30, 8, 1);
 
 -- --------------------------------------------------------
 
@@ -118,8 +130,8 @@ INSERT INTO `orden_articulos` (`id`, `order_id`, `product_id`, `quantity`) VALUE
 -- Estructura de tabla para la tabla `users`
 --
 
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `first_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `last_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
@@ -130,8 +142,9 @@ CREATE TABLE `users` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   `status` enum('1','0') COLLATE utf8_unicode_ci NOT NULL DEFAULT '1',
-  `role` enum('admin','usuario') COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `role` enum('admin','usuario') COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `users`
@@ -142,64 +155,6 @@ INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `phon
 (13, 'pedro', 'pedro', 'asd@gmail.com', '828c88f34ecb4c1ca8d89e018c6fad1a', '68428625', 'calle nar', '', '2023-02-22 18:44:50', '2023-02-22 18:44:50', '1', 'usuario'),
 (14, 'Lolo', 'Romero Garcia', 'erkame_13@hotmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '654621160', 'aaaa', '', '2023-02-22 19:13:22', '2023-02-22 19:13:22', '1', 'usuario'),
 (15, 'prueba', 'prueba', 'hola1234@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', '64447775', 'plaza', '', '2023-02-23 16:32:40', '2023-02-23 16:32:40', '1', 'usuario');
-
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `mis_productos`
---
-ALTER TABLE `mis_productos`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `orden`
---
-ALTER TABLE `orden`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `customer_id` (`customer_id`);
-
---
--- Indices de la tabla `orden_articulos`
---
-ALTER TABLE `orden_articulos`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `order_id` (`order_id`);
-
---
--- Indices de la tabla `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `mis_productos`
---
-ALTER TABLE `mis_productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
--- AUTO_INCREMENT de la tabla `orden`
---
-ALTER TABLE `orden`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
-
---
--- AUTO_INCREMENT de la tabla `orden_articulos`
---
-ALTER TABLE `orden_articulos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
-
---
--- AUTO_INCREMENT de la tabla `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Restricciones para tablas volcadas
