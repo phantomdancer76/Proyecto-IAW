@@ -38,7 +38,18 @@
         } else {
             echo "<script>alert('0 Resultados');</script>";
         }
-
+        function check_admin($admin, $usuario)
+{
+  if (isset($_SESSION['role'])) {
+    if ($_SESSION['role'] == 'admin') {
+      echo "href='./carrito-master/admin/$admin'";
+    } else {
+      echo "href='./carrito-master/$usuario'";
+    }
+  } else {
+    echo "href='./olvidopass-master/index.php'";
+  };
+};
 		?>
   <body>
     <!-- IE Panel-->
@@ -157,7 +168,7 @@
                         <div class="text-extra-big font-weight-bold font-italic text-uppercase" data-caption-animate="fadeInUp" data-caption-delay="300">Puedes ir más allá</div>
                       </div>
                       <div class="col-xl-8 offset-top-10">
-                        <h5 class="hidden d-sm-block text-light" data-caption-animate="fadeInUp" data-caption-delay="500">Los clientes de nuestro gimnasio no solo reciven lo justo y necesario en cuanto equipamiento, si no que reciben apoyo moral y motivacional para conseguir su meta de entrenamiento
+                        <h5 class="hidden d-sm-block text-light" data-caption-animate="fadeInUp" data-caption-delay="500">Los clientes de nuestro gimnasio no solo reciben lo justo y necesario en cuanto equipamiento, si no que reciben apoyo moral y motivacional para conseguir su meta de entrenamiento
                         </h5>
                         <div class="offset-top-20 offset-sm-top-50"><a class="btn btn-danger btn-anis-effect" href="olvidopass-master/index.php" data-waypoint-to="#welcome" data-caption-animate="fadeInUp" data-caption-delay="800"><span class="btn-text">Inscríbete Ahora</span></a></div>
                       </div>
@@ -217,7 +228,7 @@
                 <div>
                   <h4 class="thumbnail-terry-title">Bodybuilding</h4>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="olvidopass-master/index.php">Primera clase gratuita</a>
+                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" <?php check_admin("index.php","index.php")?>>Ve a la tienda y ve nuestras clases</a>
               </figcaption>
             </figure>
           </div>
@@ -228,7 +239,7 @@
                 <div>
                   <h4 class="thumbnail-terry-title">Fitness</h4>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="olvidopass-master/index.php">Primera clase gratuita</a>
+                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" <?php check_admin("index.php","index.php")?>>Ve a la tienda y ve nuestras clases</a>
               </figcaption>
             </figure>
           </div>
@@ -239,7 +250,7 @@
                 <div>
                   <h4 class="thumbnail-terry-title">Crossfit</h4>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="olvidopass-master/index.php">Primera clase gratuita</a>
+                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" <?php check_admin("index.php","index.php")?>>Ve a la tienda y ve nuestras clases</a>
               </figcaption>
             </figure>
           </div>
@@ -250,7 +261,7 @@
                 <div>
                   <h4 class="thumbnail-terry-title">Clases conjuntas</h4>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="#">Primera clase gratuita</a>
+                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="#">Ve a la tienda y ve nuestras clases</a>
               </figcaption>
             </figure>
           </div>
@@ -261,7 +272,7 @@
                 <div>
                   <h4 class="thumbnail-terry-title">Entrenamiento de fuerza</h4>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="olvidopass-master/index.php">Primera clase gratuita</a>
+                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" <?php check_admin("index.php","index.php")?>>Ve a la tienda y ve nuestras clases</a>
               </figcaption>
             </figure>
           </div>
@@ -272,7 +283,7 @@
                 <div>
                   <h4 class="thumbnail-terry-title">Yoga</h4>
                 </div>
-                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" href="olvidopass-master/index.php">Primera clase gratuita</a>
+                <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger" <?php check_admin("index.php","index.php")?>>Ve a la tienda y ve nuestras clases</a>
               </figcaption>
             </figure>
           </div>

@@ -28,10 +28,6 @@ if(!empty($sessData['status']['msg'])){
 				<input type="text" name="address" placeholder="Dirección de facturación" require="">
 				<input type="password" name="password" placeholder="Contraseña" required="">
 				<input type="password" name="confirm_password" placeholder="Confirma tu Contraseña" required="">
-				<select name="role">
-					<option value="admin">admin</option>
-					<option value="usuario">usuario</option>
-				</select>
 				<div class="send-button">
 					<input type="submit" name="signupSubmit" value="Crear Cuenta">
 				</div>

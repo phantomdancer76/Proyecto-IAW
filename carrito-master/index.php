@@ -84,8 +84,8 @@ include 'Configuracion.php';
                                     <div style="min-width: 80%" class="caption">
                                         <h4 class="list-group-item-heading"><?php echo $resultados["name"]; ?><?php 
                                         if($resultados['featured'] == 1){
-                                            echo '<i style="color:yellow" class="glyphicon glyphicon-star	
-                                            "></i>';
+                                            echo '<p class="btn btn-danger">DESTACADO <i style="color:yellow" class="glyphicon glyphicon-star	
+                                            "></i> </p>';
                                         }
                                         ?></h4>
                                         <p class="list-group-item-text"><?php echo $resultados["description"]; ?></p>

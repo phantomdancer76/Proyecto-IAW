@@ -6,7 +6,7 @@ include 'user.php';
 $user = new User();
 if(isset($_POST['signupSubmit'])){
 	//check whether user details are empty
-    if(!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['password']) && !empty($_POST['confirm_password']) && !empty($_POST['role']) && !empty($_POST['address'])){
+    if(!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['password']) && !empty($_POST['confirm_password']) && !empty($_POST['address'])){
 		//password and confirm password comparison
         if($_POST['password'] !== $_POST['confirm_password']){
             $sessData['status']['type'] = 'error';
@@ -27,7 +27,7 @@ if(isset($_POST['signupSubmit'])){
                     'email' => $_POST['email'],
                     'password' => md5($_POST['password']),
                     'phone' => $_POST['phone'],
-                    'role' => $_POST['role'],
+                    'role' => 'usuario',
                     'address' => $_POST['address']
                 );
                 $insert = $user->insert($userData);

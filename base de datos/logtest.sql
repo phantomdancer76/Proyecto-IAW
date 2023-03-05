@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-03-2023 a las 03:12:18
+-- Tiempo de generación: 05-03-2023 a las 19:17:32
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -56,7 +56,7 @@ INSERT INTO `mis_productos` (`id`, `name`, `description`, `price`, `created`, `m
 (26, 'SET DE MANCUERNAS AJUSTABLES – 2,5KG A 24KG – ROJO', 'Sé el primero en dejar una reseña Kit de mancuernas multifuncional ajustable para entrenar, fortalecer y tonificar todo el cuerpo desde tu hogar. Este Kit de levantamiento de pesas multifuncional te permitirá ejercitar los diferentes músculos y seleccionar el peso que desees consiguiendo una variación de peso de hasta el 7%.  Unidades: set de 2 unidades', 299.00, '2023-03-05 02:57:03', '2023-03-05 02:57:22', '1', '07.jpg', 0),
 (27, 'ESTERILLA DE YOGA 5 MM (CAUCHO NATURAL)', 'La esterilla de yoga de caucho natural y antideslizante de Bruutal Fitness viene en varios colores, lo que la hace perfecta para el yogui que ama expresarse a través de vivos colores. No importa el nivel que tengas en tus practicas si eres amante del yoga esta es tu esterilla, confeccionada con materiales de alta calidad respetuosos con el medio ambiente te proporcionaran una excelente durabilidad, amortiguación y resistencia al deslizamiento gracias a su textura.', 31.90, '2023-03-05 03:00:00', '2023-03-05 03:00:00', '1', '08.jpg', 1),
 (28, 'BARRA OLÍMPICA DE MUSCULACIÓN – 1.20M – 28MM (DIAM.)', 'Esta barra olímpica de rodamiento de aguja de alta precisión está concebida y destinada para levantamientos de peso rápidos como los de entrenamientos de crossfit o halterofilia como clean and jerk, snatch o power cleans.  Sus cuatro rodamientos de aguja están fabricados con acero de alta resistencia.  Largo: 1.20m  Diámetro: 28mm  Este equipo esencial para entrenamientos de peso libre permite:  Permite ganar masa muscular, fuerza, trabajar varios músculos simultáneamente, mejorar la coordinación y equilibrio, quemar más calorías y reducir el riesgo de lesiones.', 69.00, '2023-03-05 03:02:02', '2023-03-05 03:02:02', '1', '09.jpg', 0),
-(29, 'CUERDA DE SALTO VELOCIDAD – 2,8M', 'Las cuerdas de salto o combas de velocidad son una gran herramienta para los entrenamientos interválicos de alta intensidad. Te ayudan a tonificar los músculos y acelera el metabolismo, lo que se traduce en una quema de calorías constante.', 8.90, '2023-03-05 03:03:21', '2023-03-05 03:03:37', '1', '10.jpg', 0);
+(29, 'CUERDA DE SALTO VELOCIDAD – 2,8M', 'Las cuerdas de salto o combas de velocidad son una gran herramienta para los entrenamientos interválicos de alta intensidad. Te ayudan a tonificar los músculos y acelera el metabolismo, lo que se traduce en una quema de calorías constante.', 8.90, '2023-03-05 03:03:21', '2023-03-05 07:14:09', '1', '10.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `orden` (
   `status` enum('1','0') COLLATE utf8_unicode_ci NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `customer_id` (`customer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `orden`
@@ -84,8 +84,7 @@ INSERT INTO `orden` (`id`, `customer_id`, `total_price`, `created`, `modified`, 
 (20, 3, 35.00, '2023-02-22 12:03:50', '2023-02-22 12:03:50', '1'),
 (22, 13, 35.00, '2023-02-22 12:45:03', '2023-02-22 12:45:03', '1'),
 (23, 3, 35.00, '2023-02-22 13:10:48', '2023-02-22 13:10:48', '1'),
-(24, 14, 35.00, '2023-02-22 13:13:49', '2023-02-22 13:13:49', '1'),
-(30, 14, 35.00, '2023-03-04 19:04:54', '2023-03-04 19:04:54', '1');
+(24, 14, 35.00, '2023-02-22 13:13:49', '2023-02-22 13:13:49', '1');
 
 -- --------------------------------------------------------
 
@@ -100,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `orden_articulos` (
   `quantity` int(5) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `order_id` (`order_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `orden_articulos`
@@ -111,9 +110,7 @@ INSERT INTO `orden_articulos` (`id`, `order_id`, `product_id`, `quantity`) VALUE
 (13, 20, 12, 1),
 (17, 22, 12, 1),
 (18, 23, 12, 1),
-(19, 24, 12, 1),
-(31, 30, 9, 1),
-(32, 30, 8, 1);
+(19, 24, 12, 1);
 
 -- --------------------------------------------------------
 
@@ -135,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `status` enum('1','0') COLLATE utf8_unicode_ci NOT NULL DEFAULT '1',
   `role` enum('admin','usuario') COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `users`
@@ -145,7 +142,8 @@ INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `phon
 (3, 'Óscar', 'Álvarez Lucas', 'oalvluc0702@g.educaand.es', '07966fb6ae025d8c6e1c28baa0656825', '671332546', 'micasa', '', '2023-02-02 17:42:28', '2023-02-02 17:42:28', '1', 'admin'),
 (13, 'pedro', 'pedro', 'asd@gmail.com', '828c88f34ecb4c1ca8d89e018c6fad1a', '68428625', 'calle nar', '', '2023-02-22 18:44:50', '2023-02-22 18:44:50', '1', 'usuario'),
 (14, 'Lolo', 'Romero Garcia', 'erkame_13@hotmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '654621160', 'aaaa', '', '2023-02-22 19:13:22', '2023-02-22 19:13:22', '1', 'usuario'),
-(15, 'prueba', 'prueba', 'hola1234@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', '64447775', 'plaza', '', '2023-02-23 16:32:40', '2023-02-23 16:32:40', '1', 'usuario');
+(15, 'prueba', 'prueba', 'hola1234@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', '64447775', 'plaza', '', '2023-02-23 16:32:40', '2023-02-23 16:32:40', '1', 'usuario'),
+(16, 'oscar', 'Pepito Canelo', 'holita123@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', '1241214', 'Calle plaza del arroyo nº38', '', '2023-03-05 19:16:31', '2023-03-05 19:16:31', '1', 'usuario');
 
 --
 -- Restricciones para tablas volcadas
