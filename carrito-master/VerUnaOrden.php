@@ -1,5 +1,6 @@
 <?php
 include 'Configuracion.php';
+$idpasada=$_REQUEST['id'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -46,7 +47,7 @@ include 'Configuracion.php';
             </div>
 
             <div class="panel-body">
-                <h1>Tienda de Productos - Historial de compras</h1>
+                <h1>Tienda de Productos - Artículos de la orden número <?php echo $idpasada;?></h1>
                 </br>
                 <table class="table">
                     <thead>
