@@ -1,11 +1,37 @@
 <?php
 include 'Configuracion.php';
 ?>
+<?php
+      //start session
+      session_start();
+      $iduser = $_SESSION['userID'];
+
+      include "../olvidopass-master/dbConfig.php";
+      $selectquery = "SELECT * FROM users WHERE id = $iduser;";
+      $result = mysqli_query($mysqli, $selectquery) or die(mysqli_error($mysqli));
+      //Si es mayor que cero el número de filas obtenidas
+      if (mysqli_num_rows($result) > 0) {
+        //Recorremos cada una de las filas de la tabla para obtener todos los productos.
+            while($row = mysqli_fetch_assoc($result)) {
+                $_SESSION['email']=$row['email'];
+                $_SESSION['id']=$row['id'];
+                $_SESSION['userID']=$row['id'];
+                $_SESSION['first_name']=$row['first_name'];
+                $_SESSION['last_name']=$row['last_name'];
+                $_SESSION['phone']=$row['phone'];
+                $_SESSION['role']=$row['role'];
+            }
+        } else {
+            echo "<script>alert('0 Resultados');</script>";
+        }
+
+		?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <title>Modificar Productos</title>
+    <title>Historial de compras para <?php echo $_SESSION['email'];?>
+    </title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -22,7 +48,7 @@ include 'Configuracion.php';
             font-size: 22px;
         }
         body{
-            background-image: url("../../images/pesa.jpg");
+            background-image: url("../images/pesa.jpg");
     }
     </style>
 </head>
@@ -37,35 +63,33 @@ include 'Configuracion.php';
                     <li role="presentation"><a href="index.php">Inicio</a></li>
                     <li role="presentation"><a href="VerCarta.php">Carrito de Compras</a></li>
                     <li role="presentation"><a href="Pagos.php">Pagar</a></li>
-                    <li role="presentation"><a href="AgregarProducto.php">Nuevo Producto</a></li>
-                    <li role="presentation" ><a href="ModificarProducto.php">Modificar Producto</a></li>
-                    <li role="presentation" class="active"><a href="EliminarProducto.php">Eliminar Producto</a></li>
                     <li role="presentation"><a href="historialCompras.php">Historial de Compras</a></li>
-                    <li role="presentation"><a href="devolucion.php">Devolución de orden</a></li>
-                    <li role="presentation"><a href="../../index2.php">Volver a la página principal</a></li>
+                    <li role="presentation" class="active"><a href="devolucion.php">Devolución de orden</a></li>
+                    <li role="presentation"><a href="../index2.php">Volver a la página principal</a></li>
                 </ul>
             </div>
 
             <div class="panel-body">
-                <h1>Tienda de Productos - Eliminar</h1>
+                <h1>Tienda de Productos - devolución de orden de compra para <?php echo $_SESSION['email'];
+                ?></h1>
                 </br>
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Nombre</th>
-                            <th>Descripción</th>
-                            <th>Precio</th>
+                            <th>Codigo identificador</th>
+                            <th>Precio total</th>
+                            <th>Fecha de creación</th>
                             <th>&nbsp;</th>
-                            <th>Editar</th>
+                            <th>Ver orden</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
                         //start session
-                        session_start();
+                        $iddeusuario = $_SESSION['userID'];
                         //Incluimos el fichero de configuración para poder conectarnos con la BBDD.
                         include 'Configuracion.php';
-                        $selectquery = "SELECT id, name, description, price FROM mis_productos;";
+                        $selectquery = "SELECT id, total_price, created FROM orden WHERE customer_id = $iddeusuario;";
                         $result = mysqli_query($db , $selectquery) or die(mysqli_error($db));
 
                         //Si es mayor que cero el número de filas obtenidas
@@ -74,12 +98,12 @@ include 'Configuracion.php';
                             while($row = mysqli_fetch_assoc($result)) {
                                 echo "
                                 <tr>
-                                    <td>".$row["name"]."</td>
-                                    <td>".$row["description"]."</td>
-                                    <td>".$row["price"]."</td>
+                                    <td>".$row["id"]."</td>
+                                    <td>".$row["total_price"]."</td>
+                                    <td>".$row["created"]."</td>
                                     <td>&nbsp;</td>
                                     <td>
-                                        <a href='EliminarUnProducto.php?id=". $row["id"]."' class='btn btn-danger' onclick=\"return confirm('¿Deseas eliminar este producto?');\"><i class='glyphicon glyphicon-trash'></i></a>
+                                        <a href='devolucionUnaOrden.php?id=". $row["id"]."&precioreembol=". $row["total_price"]."' class='btn btn-danger'><i class='glyphicon glyphicon-trash'></i></a>
                                     </td>
                                 </tr>
                                 ";
@@ -91,7 +115,7 @@ include 'Configuracion.php';
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td><a href="index.php" class="btn btn-danger"><i class="glyphicon glyphicon-menu-left"></i> Volver a la tienda</a></td>
+                            <td><a href="index.php" class="btn btn-warning"><i class="glyphicon glyphicon-menu-left"></i> Volver a la tienda</a></td>
                             <td colspan="2"></td>
                         </tr>
                     </tfoot>

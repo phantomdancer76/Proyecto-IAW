@@ -66,6 +66,7 @@ $custRow = $query->fetch_assoc();
                     <li role="presentation"><a href="VerCarta.php">Carrito de Compras</a></li>
                     <li role="presentation" class="active"><a href="Pagos.php">Pagar</a></li>
                     <li role="presentation"><a href="historialCompras.php">Historial de Compras</a></li>
+                    <li role="presentation"><a href="devolucion.php">Devolución de orden</a></li>
                     <li role="presentation"><a href="../index2.php">Volver a la página principal</a></li>
 
                 </ul>

@@ -61,7 +61,7 @@
               <!-- RD Navbar Top Panel-->
               <div class="rd-navbar-top-panel context-dark bg-danger">
                 <div class="left-side">
-                  <address class="contact-info text-left"><a href="tel:#"><span class="icon mdi mdi-cellphone-android novi-icon"></span><span class="text-middle">1-800-1324-567</span></a></address>
+                  <address class="contact-info text-left"><a href="tel:#"><span class="icon mdi mdi-cellphone-android novi-icon"></span><span class="text-middle">671 33 25 46</span></a></address>
                 </div>
                 <div class="center">
                   <address class="contact-info text-left"><a href="#"><span class="icon mdi mdi-map-marker-radius novi-icon"></span><span class="text-middle">Calle de la santa fé, Jerez de la Frontera</span></a></address>

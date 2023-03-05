@@ -41,6 +41,7 @@ include 'Configuracion.php';
                     <li role="presentation"><a href="VerCarta.php">Carrito de Compras</a></li>
                     <li role="presentation"><a href="Pagos.php">Pagar</a></li>
                     <li role="presentation"><a href="historialCompras.php">Historial de Compras</a></li>
+                    <li role="presentation"><a href="devolucion.php">Devolución de orden</a></li>
                     <li role="presentation"><a href="../index2.php">Volver a la página principal</a></li>
                 </ul>
             </div>
@@ -83,7 +84,7 @@ include 'Configuracion.php';
                                     <div style="min-width: 80%" class="caption">
                                         <h4 class="list-group-item-heading"><?php echo $resultados["name"]; ?><?php 
                                         if($resultados['featured'] == 1){
-                                            echo '<i class="glyphicon glyphicon-star	
+                                            echo '<i style="color:yellow" class="glyphicon glyphicon-star	
                                             "></i>';
                                         }
                                         ?></h4>

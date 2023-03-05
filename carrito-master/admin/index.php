@@ -35,7 +35,7 @@ include 'Configuracion.php';
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" >
         <div class="panel panel-default">
             <div class="panel-heading">
 
@@ -47,7 +47,10 @@ include 'Configuracion.php';
                     <li role="presentation"><a href="ModificarProducto.php">Modificar Producto</a></li>
                     <li role="presentation"><a href="EliminarProducto.php">Eliminar Producto</a></li>
                     <li role="presentation"><a href="historialCompras.php">Historial de Compras</a></li>
+                    <li role="presentation"><a href="devolucion.php">Devolución de orden</a></li>
                     <li role="presentation"><a href="../../index2.php">Volver a la página principal</a></li>
+                   
+
                 </ul>
             </div>
 
@@ -89,8 +92,8 @@ include 'Configuracion.php';
                                     <div style="min-width: 80%" class="caption">
                                         <h4 class="list-group-item-heading"><?php echo $resultados["name"]; ?>      <?php 
                                         if($resultados['featured'] == 1){
-                                            echo '<i class="glyphicon glyphicon-star	
-                                            "></i>';
+                                            echo '<p class="btn btn-danger">DESTACADO <i style="color:yellow" class="glyphicon glyphicon-star	
+                                            "></i> </p>';
                                         }
                                         ?></h4>
                                         <p class="list-group-item-text"><?php echo $resultados["description"]; ?></p>
