@@ -8,6 +8,8 @@ if (!isset($_REQUEST['id'])) {
 
 <head>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
   <title>Orden Completado - PHP Carrito de Compras</title>
   <meta charset="utf-8">
   <style>
